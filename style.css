@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+body{
+    background-color: #eae8e0;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+  font-style: normal;
+}
+.navbar{
+    background-image: linear-gradient(#21382a, #1e3127);
+    border-bottom:1px solid #eae8e0;
+}
+.navbar a, .jumbotron{
+    color: #eae8e0;
+}
+.navbar ul{
+     padding-right: 20px;
+}
+.navbar ul li{
+     padding:0 0 0 20px;
+}
+.navbar a:hover, .navbar-nav .nav-link.active{
+    color: #e2bb60;
+}
+.navbar .btn{
+    background-color: #eae8e0;
+    color: #1e3127
+}
+.navbar .btn:hover{
+    background-color: #e2bb60;
+    color: #eae8e0
+}
+
+.navbar-brand p{
+    font-weight: 600;
+    margin:0px;
+}
+
+.navbar .navbar-brand:hover{
+    text-decoration: none;
+    color:#eae8e0
+}
+.navbar-brand img{
+    width: 17%;
+    float:left;
+    margin:3px 10px 0 0;
+}
+
+.jumbotron{
+    background:url(images/2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 30px 0 70px 0
+    
+}
+
+.jumbotron h1, .jumbotron h2, .jumbotron h5, .jumbotron {
+    text-transform: capitalize;
+}
+
+.slogan{
+    padding:30px 0px;
+}
