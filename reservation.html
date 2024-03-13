@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- viewport tag indicates that we gonna have screen size set to device width and initial size 100 %, not smaller or bigger-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Rachel Roche, Darragh Sherdan, Rafal Rybarski">
+    <meta name="keywords"
+        content="Emerald Haven Hotel, luxury hotel Ireland, accommodations in Ireland, Irish countryside retreat, elegant Irish hotel, historic Irish manor, luxury stay Ireland, best hotels in Ireland, Irish castle hotels, exclusive hotels Ireland, Ireland travel, cultural Irish experience, Irish vacation destinations">
+    <title>Emerald Haven Hotel</title>
+    <!-- Include boostrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Include theme CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment-with-locales.min.js"></script>
+
+    <script>
+        function loadDatePicker() {
+            var dayrates = getRates();
+            $(".datepicker").datepicker({
+                minDate: 0,
+                beforeShowDay: function (date) {
+                    var date1 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#input1").val());
+                    var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#input2").val());
+                    var title = "\u20AC" + dayrates[date.getDay()];
+                    return [true, date1 && ((date.getTime() == date1.getTime()) || (date2 && date >= date1 && date <= date2)) ? "dp-highlight" : "", title];
+                },
+                onSelect: function (dateText, inst) {
+                    var date1 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#input1").val());
+                    var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#input2").val());
+                    var selectedDate = $.datepicker.parseDate($.datepicker._defaults.dateFormat, dateText);
+
+
+                    if (!date1 || date2) {
+                        $("#input1").val(dateText);
+                        $("#input2").val("");
+                        $(this).datepicker();
+                        price();
+                    } else if (selectedDate < date1) {
+                        $("#input2").val($("#input1").val());
+                        $("#input1").val(dateText);
+                        $(this).datepicker();
+                        console.log(dateText);
+                        price();
+                    } else {
+                        $("#input2").val(dateText);
+                        $(this).datepicker();
+                        price();
+                    }
+                }
+            });
+        }
+
+        function getRates() {
+            return [195, 150, 150, 160, 175, 235, 270];
+        }
+
+        function price() {
+            var future = moment(document.getElementById("input2").value);
+            var start = moment(document.getElementById("input1").value);
+
+            var nights = future.diff(start, 'days');
+            if (!isNaN(nights)) {
+                console.log("Number of nights: " + nights);
+                document.getElementById("nights").value = nights;
+            } else {
+                document.getElementById("nights").value = "0";
+            }
+
+            var dayrates = getRates();
+            var sundays = getDaysBetweenDates(start, future, 0) * dayrates[0];
+            var mondays = getDaysBetweenDates(start, future, 1) * dayrates[1];
+            var tuesdays = getDaysBetweenDates(start, future, 2) * dayrates[2];
+            var wednesdays = getDaysBetweenDates(start, future, 3) * dayrates[3];
+            var thursdays = getDaysBetweenDates(start, future, 4) * dayrates[4];
+            var fridays = getDaysBetweenDates(start, future, 5) * dayrates[5];
+            var saturdays = getDaysBetweenDates(start, future, 6) * dayrates[6];
+
+            console.log("Sundays: " + sundays);
+            console.log("Mondays: " + mondays);
+            console.log("Tuesdays: " + tuesdays);
+            console.log("Wednesdays: " + wednesdays);
+            console.log("Thursdays: " + thursdays);
+            console.log("Fridays: " + fridays);
+            console.log("Saturdays: " + saturdays);
+
+            document.getElementById("price").value = "Purchase $" + (sundays + mondays + tuesdays + wednesdays + thursdays + fridays + saturdays);
+        }
+
+
+        /* Given a start date, end date and day index, return
+        ** the number of occurrances of that day
+        ** @param {Date} start - date to start from
+        ** @param {Date} end - date to end on
+        ** @param {int} day - index of the day
+        ** @returns {int} - number of occurrances of the day
+        */
+        function getDaysBetweenDates(start, end, day) {
+            var result = 0;
+            // Copy start date
+            var current = new Date(start);
+            // Shift to next of required days
+            current.setDate(current.getDate() + (day - current.getDay() + 7) % 7);
+            // While less than end date, increment and loop
+            while (current < end) {
+                result++;
+                current.setDate(current.getDate() + 7);
+            }
+            return result;
+        }
+
+        /* Load the date picker to make the calendar available when the 
+        ** page is rendered
+        */
+        $(document).ready(function () {
+            loadDatePicker();
+        });
+
+    </script>
+
+    <style>
+        @import url("https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/blitzer/jquery-ui.min.css");
+
+        .ui-datepicker {
+            width: 600px;
+            height: 350px;
+        }
+
+        .ui-datepicker td span,
+        .ui-datepicker td a {
+            padding-bottom: 1em;
+            background: #1f3127;
+        }
+
+        .ui-datepicker-header {
+            background: #1f3127;
+        }
+
+        .ui-datepicker td[title]::after {
+            content: attr(title);
+            display: block;
+            position: relative;
+            font-size: .8em;
+            height: 1.25em;
+            margin-top: -1.25em;
+            text-align: right;
+            padding-right: .25em;
+        }
+
+        .dp-highlight .ui-state-default {
+            background: #a4c0af;
+            color: #FFF;
+        }
+
+        .ui-datepicker.ui-datepicker-multi {
+            width: 100% !important;
+        }
+
+        .ui-datepicker-multi .ui-datepicker-group {
+            float: none;
+        }
+
+        #datepicker {
+            height: 300px;
+            overflow-x: scroll;
+        }
+
+        .ui-widget {
+            font-size: 100%
+        }
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="images/logotype.png">
+                    <p>EMERALD HAVEN</p>
+                    <p>HOTEL</p>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="rooms.html">Rooms</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Dining</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Activities</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Hotel SPA</a></li>
+                                <li><a class="dropdown-item" href="#">Golf</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Pet Farm</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Gallery</a>
+                        </li>
+                    </ul>
+                    <form class="justify-content-start">
+                        <button class="btn btn-sm btn-outline-secondary" type="button">Booking</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="jumbotron text-center">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="slogan col-md-3">
+                        <h1 class="jumbotron-heading">Emerald</h1>
+                        <h2>Haven</h2>
+                        <h5>hotel</h5>
+                        <p class="lead text-muted">hotel</p>
+                        <p>
+                            <a href="#" class="btn btn-secondary my-2">Book Now</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <br><br>
+    <div class="container">
+        <h2>Reservation</h2>
+
+        <form action="/action_page.php">
+
+            <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                    <div class="mb-3 mt-3">
+                        <label for="name" class="form-label">Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone:</label>
+
+                        <input type="text" class="form-control" id="phone" placeholder="Enter phone number"
+                            name="phone">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="sel1" class="form-label">Number of Guests:</label>
+                        <select class="form-select" id="sel1" name="sellist1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="sel1" class="form-label">Room Type:</label>
+                        <select class="form-select" id="sel1" name="sellist1">
+                            <option>Superior Garden View</option>
+                            <option>Superior Ocean View</option>
+                            <option>Junior Suite</option>
+                            <option>Presedential Suite</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="comment" class="form-label">Special Requests:</label>
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                    </div>
+
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <div>
+                        <div class="row">
+                            <div class="col-4 mb-3 mt-3">
+                                <label for="checkin" class="form-label">Check-In:</label>
+                                <input type="text" class="form-control" id="input1" placeholder="Check-In Date"
+                                    size="15" readonly>
+                            </div>
+                            <div class="col-4 mb-3 mt-3">
+                                <label for="checkout" class="form-label">Check-Out:</label>
+                                <input type="text" class="form-control" id="input2" placeholder="Check-Out Date"
+                                    size="15" readonly>
+                            </div>
+                            <div class="col-4 mb-3 mt-3">
+                                <label for="nights-label" class="form-label">Nights:</label>
+                                <input type="text" class="form-control" id="nights" placeholder="0" size="15" readonly>
+                            </div>
+
+                        </div>
+
+                        <div class="datepicker"></div>
+                    </div>
+                    <br><br>
+                    <div class="checkbox">
+                        <label><input type="checkbox"> I authorise Emerald Haven Hotel Ltd. to debit the amount via my
+                            chosen payment method. I have accepted the Terms and Conditions as outlined here.</label>
+                    </div>
+                    <br>
+                    <div>
+                        <input onclick="price()" type="button" class="btn btn-primary btn-block" value="Purchase $0"
+                            id="price" />
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br>
+    <div class="container">
+
+    </div>
+
+    <footer>
+    </footer>
+    <!-- Include boostrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
