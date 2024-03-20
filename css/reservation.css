@@ -1,0 +1,49 @@
+@import url("https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/blitzer/jquery-ui.min.css");
+
+.ui-datepicker {
+    width: 600px;
+    height: 350px;
+}
+
+.ui-datepicker td span,
+.ui-datepicker td a {
+    padding-bottom: 1em;
+    background: #1f3127;
+}
+
+.ui-datepicker-header {
+    background: #1f3127;
+}
+
+.ui-datepicker td[title]::after {
+    content: attr(title);
+    display: block;
+    position: relative;
+    font-size: .8em;
+    height: 1.25em;
+    margin-top: -1.25em;
+    text-align: right;
+    padding-right: .25em;
+}
+
+.dp-highlight .ui-state-default {
+    background: #a4c0af;
+    color: #FFF;
+}
+
+.ui-datepicker.ui-datepicker-multi {
+    width: 100% !important;
+}
+
+.ui-datepicker-multi .ui-datepicker-group {
+    float: none;
+}
+
+#datepicker {
+    height: 300px;
+    overflow-x: scroll;
+}
+
+.ui-widget {
+    font-size: 100%
+}
