@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- viewport tag indicates that we gonna have screen size set to device width and initial size 100 %, not smaller or bigger-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Rachel Roche, Darragh Sherdan, Rafal Rybarski">
+    <meta name="keywords"
+        content="Emerald Haven Hotel, luxury hotel Ireland, accommodations in Ireland, Irish countryside retreat, elegant Irish hotel, historic Irish manor, luxury stay Ireland, best hotels in Ireland, Irish castle hotels, exclusive hotels Ireland, Ireland travel, cultural Irish experience, Irish vacation destinations">
+    <title>Emerald Haven Hotel</title>
+    <!-- Include boostrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Include theme CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Include date picker CSS -->
+    <link rel="stylesheet" href="css/reservation.css">
+
+    <!-- Include reservation javascript functionality -->
+    <script src="js/reservation.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment-with-locales.min.js"></script>
+
+    <script>
+        /* Load the date picker to make the calendar available when the 
+        ** page is rendered and hide the modal summary until after payment
+        */
+        $(document).ready(function () {
+            loadDatePicker();
+            var summary = document.getElementById('bookingSummary');
+            summary.style.display = 'none';
+        });
+    </script>
+</head>
+
+<body>
+   <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logotype.png" >
+                        <p>EMERALD HAVEN</p>
+                        <p>HOTEL</p>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="rooms.html">Rooms</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="dining.html">Dining</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="spa.html">Hotel Spa</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="gallery.html">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                        <a href="reservation.html" class="btn btn-sm btn-outline-secondary" role="button">Booking</a>
+                    </div>
+                </div>
+             </nav>
+        </header>
+    <main>
+        <section class="jumbotron text-center">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="slogan col-md-3">
+                        <h1 class="jumbotron-heading">Emerald</h1>
+                        <h2>Haven</h2>
+                        <h5>hotel</h5>
+                        <p class="lead text-muted">hotel</p>
+                        <p>
+                            <a href="#" class="btn btn-secondary my-2">Book Now</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="container">
+        <br><br>
+        <h2>Reservation</h2>
+
+        <form id="reservationForm">
+
+            <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                    <div class="mb-3 mt-3">
+                        <label for="name" class="form-label">Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="emailLabel" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phoneLabel" class="form-label">Phone:</label>
+                        <input type="text" class="form-control" id="phone" placeholder="Enter phone number"
+                            name="phone">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="guestsLabel" class="form-label">Number of Guests:</label>
+                        <select class="form-select" id="guests" name="guests" onchange="loadDatePicker()">
+                            <option value="1">1</option>
+                            <option value="1.5">2</option>
+                            <option value="2.25">3</option>
+                            <option value="2.75">4</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="roomLabel" class="form-label">Room Type:</label>
+                        <select class="form-select" id="room" name="room" onchange="loadDatePicker()">
+                            <option value="1">Superior Garden View</option>
+                            <option value="1.25">Superior Ocean View</option>
+                            <option value="2.5">Junior Suite</option>
+                            <option value="4">Presedential Suite</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="commentLabel" class="form-label">Special Requests:</label>
+                        <textarea class="form-control" rows="5" id="requests"></textarea>
+                    </div>
+
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <div>
+                        <div class="row">
+                            <div class="col-4 mb-3 mt-3">
+                                <label for="checkin" class="form-label">Check-In:</label>
+                                <input type="text" class="form-control" id="input1" placeholder="Check-In Date"
+                                    size="15" readonly>
+                            </div>
+                            <div class="col-4 mb-3 mt-3">
+                                <label for="checkout" class="form-label">Check-Out:</label>
+                                <input type="text" class="form-control" id="input2" placeholder="Check-Out Date"
+                                    size="15" readonly>
+                            </div>
+                            <div class="col-4 mb-3 mt-3">
+                                <label for="nights-label" class="form-label">Nights:</label>
+                                <input type="text" class="form-control" id="nights" placeholder="0" size="15" readonly>
+                            </div>
+
+                        </div>
+
+                        <div class="datepicker"></div>
+                    </div>
+                    <br><br>
+                    <div class="checkbox">
+                        <label><input type="checkbox"> I authorise Emerald Haven Hotel Ltd. to debit the amount via my
+                            chosen payment method. I have accepted the Terms and Conditions as outlined here.</label>
+                    </div>
+                    <br>
+                    <div>
+                        <input data-bs-toggle="modal" data-bs-target="#myModal" type="button"
+                            class="btn btn-primary btn-block" value="Purchase $0" id="price"
+                            onclick="requestBooking()" />
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br>
+
+    <!-- The Reservation Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <!-- <h4 class="modal-title">Reservation Summary</h4> -->
+                    <h4 class="modal-title">Payment</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container">
+                        <div id="bookingSummary">
+                            <p><label>Name: </label><label id="bookingName" class="form-label"></label></p>
+                            <p><label>Email: </label><label id="bookingEmail" class="form-label"></label></p>
+                            <p><label>Phone: </label><label id="bookingPhone" class="form-label"></label></p>
+                            <p><label>Check-In: </label><label id="bookingCheckIn" class="form-label"></label></p>
+                            <p><label>Check-Out: </label><label id="bookingCheckOut" class="form-label"></label></p>
+                            <p><label>Nights: </label><label id="bookingNights" class="form-label"></label></p>
+                            <p><label>Guests: </label><label id="bookingGuests" class="form-label"></label></p>
+                            <p><label>Room: </label><label id="bookingRoom" class="form-label"></label></p>
+                            <p><label>Price: </label><label id="bookingPrice" class="form-label"></label></p>
+                            <input type="button" class="btn btn-danger" data-bs-dismiss="modal" id="finish"
+                                value="Close" onclick="resetForm()" />
+                        </div>
+
+                        <div id="paymentForm">
+
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div class="form-outline">
+                                        <div class="form-check mb-4">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="checkoutForm3" checked />
+                                            <label class="form-check-label" for="checkoutForm3">
+                                                Credit card
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check mb-4">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="checkoutForm4" />
+                                            <label class="form-check-label" for="checkoutForm4">
+                                                Debit card
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-outline">
+                                        <img src="images/card-icons.png" alt="Cards" class="img-fluid" style="height:80px;" />
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div class="form-outline">
+                                        <input type="text" id="formNameOnCard" class="form-control" />
+                                        <label class="form-label" for="formNameOnCard">Name on card</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-outline">
+                                        <input type="text" id="formCardNumber" class="form-control" />
+                                        <label class="form-label" for="formCardNumber">Credit card number</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-3">
+                                    <div class="form-outline">
+                                        <input type="text" id="formExpiration" class="form-control" />
+                                        <label class="form-label" for="formExpiration">Expiration</label>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-outline">
+                                        <input type="text" id="formCVV" class="form-control" />
+                                        <label class="form-label" for="formCVV">CVV</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <input type="button" class="btn btn-primary btn-block" value="Pay" id="paymentButton"
+                                onclick="pay()" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+    </footer>
+    <!-- Include boostrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
