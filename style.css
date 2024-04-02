@@ -1,78 +1,134 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-body{
+
+body {
     background-color: #eae8e0;
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-weight: 400;
-  font-style: normal;
+    font-style: normal;
 }
-.navbar{
+
+.navbar {
     background-image: linear-gradient(#21382a, #1e3127);
-    border-bottom:1px solid #eae8e0;
+    border-bottom: 1px solid #eae8e0;
 }
-.navbar a, .jumbotron{
+
+.navbar a,
+.jumbotron {
     color: #eae8e0;
 }
-.navbar ul{
-     padding-right: 20px;
+
+.navbar ul {
+    padding-right: 20px;
 }
-.navbar ul li{
-     padding:0 0 0 20px;
+
+.navbar ul li {
+    padding: 0 0 0 20px;
 }
-.navbar a:hover, .navbar-nav .nav-link.active{
+
+.navbar a:hover,
+.navbar-nav .nav-link.active {
     color: #e2bb60;
 }
-.navbar .btn{
+
+.navbar .btn {
     background-color: #eae8e0;
     color: #1e3127
 }
-.navbar .btn:hover{
+
+.navbar .btn:hover {
     background-color: #e2bb60;
     color: #eae8e0
 }
 
-.navbar-brand p{
+.navbar-brand p {
     font-weight: 600;
-    margin:0px;
+    margin: 0px;
 }
 
-.navbar .navbar-brand:hover{
+.navbar .navbar-brand:hover {
     text-decoration: none;
-    color:#eae8e0
-}
-.navbar-brand img{
-    width: 17%;
-    float:left;
-    margin:3px 10px 0 0;
+    color: #eae8e0
 }
 
-.jumbotron{
-    background:url(images/2.jpg) no-repeat;
+.navbar-brand img {
+    width: 17%;
+    float: left;
+    margin: 3px 10px 0 0;
+}
+
+.jumbotron {
+    background: url(images/2.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     padding: 30px 0 70px 0
-    
 }
 
-.jumbotron h1, .jumbotron h2, .jumbotron h5, .jumbotron {
+.jumbotron h1,
+.jumbotron h2,
+.jumbotron h5,
+.jumbotron {
     text-transform: capitalize;
 }
 
-.slogan{
-    padding:30px 0px;
+.slogan {
+    padding: 30px 0px;
 }
 
 .banner-image img {
-	width: 100%;
-	height: 400px;
-	object-fit: cover;
-	object-position: 0% 50%;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: 0% 50%;
 }
 
 .dining-padding-bottom {
-   margin-bottom:20px;
+    margin-bottom: 20px;
 }
 
 .dining-padding-top {
-   margin-top:20px;
+    margin-top: 20px;
+}
+
+.dark-container {
+    background-color: #eae8e0
+}
+
+.parallax {
+    background-image: url("images/sauna.webp");
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.spa-parallax {
+    background-image: url("images/spa-gt.jpg");
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text-justify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.padded-text {
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+}
+
+.padded-margins {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.padded-bottom {
+    padding-bottom: 50px;
 }
