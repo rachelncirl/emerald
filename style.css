@@ -112,6 +112,23 @@ body {
     background-size: cover;
 }
 
+.dining-parallax1 {
+    background-image: url("images/parralax2.jpg");
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dining-parallax2 {
+    background-image: url("images/parralax1.jpg");
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .text-justify {
     text-align: justify;
     text-justify: inter-word;
@@ -131,4 +148,8 @@ body {
 
 .padded-bottom {
     padding-bottom: 50px;
+}
+
+.padded-top {
+    padding-top: 50px;
 }
