@@ -8,73 +8,131 @@ body {
     font-style: normal;
 }
 
+.btn-brown{
+    background-color: #AA8453
+}
+
+/* Navigation Bar Styles */
 .navbar {
     background-image: linear-gradient(#21382a, #1e3127);
     border-bottom: 1px solid #eae8e0;
+    padding: 10px 20px; /* Consistent padding around elements */
 }
 
-.navbar a,
-.jumbotron {
+.navbar a {
     color: #eae8e0;
-}
-
-.navbar ul {
-    padding-right: 20px;
-}
-
-.navbar ul li {
-    padding: 0 0 0 20px;
+    transition: color 0.3s; /* Smooth transition for hover effects */
 }
 
 .navbar a:hover,
 .navbar-nav .nav-link.active {
-    color: #e2bb60;
+    color: #FFCA2C;
+}
+
+.navbar li{
+    padding:0 10px;
 }
 
 .navbar .btn {
-    background-color: #eae8e0;
-    color: #1e3127
+    color: #1e3127;
 }
 
 .navbar .btn:hover {
-    background-color: #e2bb60;
-    color: #eae8e0
+
+    color: #1e3127;
 }
+
 
 .navbar-brand p {
-    font-weight: 600;
-    margin: 0px;
-}
-
-.navbar .navbar-brand:hover {
-    text-decoration: none;
-    color: #eae8e0
+    font-weight: 700;
+    padding-top:10px;
 }
 
 .navbar-brand img {
     width: 17%;
     float: left;
-    margin: 3px 10px 0 0;
+    padding:5px 10px 5px 0 
 }
 
-.jumbotron {
-    background: url(images/2.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding: 30px 0 70px 0
+/* Hero Section Styles */
+.hero-section {
+    background: url('images/hotel.jpg') center / cover no-repeat; /* Shorthand for background properties */
+    width: 100%;
+    display: flex;
+    padding-top:80px;
 }
 
-.jumbotron h1,
-.jumbotron h2,
-.jumbotron h5,
-.jumbotron {
-    text-transform: capitalize;
+.hero-section h1{
+    margin-top:60px;
 }
 
+.landing_booking input, .landing_booking label, .landing_booking button, .room button{
+    font-size: 12px;
+}
+
+.landing_booking{
+    background: rgba(30, 49, 39, .6);
+    padding:10px 0 15px 0;
+    border-top: 1px solid #eae8e0;
+    border-left: 1px solid #eae8e0;
+    border-right: 1px solid #eae8e0;
+    margin-top:200px
+}
+
+.landing_booking input, .landing_booking button, .navbar .btn, .room button{
+    border-radius: 0;
+    font-weight: bold
+}
+
+.landing_booking label{
+    float:left
+}
+
+.img-fluid{
+    height:200px !important;
+    width:100%;
+}
+
+ .fa-bed, .fa-bath, .fa-wifi,.room-offer span{
+    color: #AA8453
+}
+
+.room-offer span{
+}
+
+.bi-star-fill{
+    color:#F5C020
+}
+
+.introduction div{
+}
+
+.introduction .img_bg{
+    height:570px;
+    position: relative;
+}
+
+.introduction .img_fr{
+    height:200px;
+    width:250px;
+    border:15px solid #fff;
+    position:absolute;
+    top:72%;
+    right:2%
+}
+
+.overlay_promo{
+    position:absolute;
+    top:25%;
+    right:32%;
+    background: rgba(30, 49, 39, .9);
+}
+.green{
+    background-color: #1F3328
+}
 .slogan {
     padding: 30px 0px;
 }
-
 .banner-image img {
     width: 100%;
     height: 400px;
