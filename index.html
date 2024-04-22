@@ -11,18 +11,25 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <!-- Include theme CSS-->
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <!-- Include the datepicker CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+        <!-- Include jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container">
                     <a class="navbar-brand" href="index.html">
                         <img src="images/logotype.png" >
-                        <p>EMERALD HAVEN</p>
-                        <p>HOTEL</p>
+                        <p class="m-0">EMERALD HAVEN</p>
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -45,31 +52,192 @@
                                 <a class="nav-link" href="contact.html">Contact</a>
                             </li>
                         </ul>
-                        <a href="reservation.html" class="btn btn-sm btn-outline-secondary" role="button">Booking</a>
+                        <a href="reservation.html" class="btn btn-sm text-light btn-brown" role="button">Booking</a>
                     </div>
                 </div>
              </nav>
+            <!-- Hero Section -->
+            <div class="hero-section bg-image text-white text-start" >
+                <div class="container">
+                    <h1 class="fw-bold ">Welcome to Emerald Haven Hotel</h1>
+                    <p class="lead">Experience luxury like never before.</p>
+                    <div class="row justify-content-lg-center landing_booking">
+                        <div class="col-lg-2">
+                            <label for="datepicker">Choose a date:</label>
+                            <input type="text" class="form-control datepicker" id="arrival" placeholder="Arrival Date">
+                        </div>
+                        <div class="col-lg-2">
+                            <label for="datepicker">Choose a date:</label>
+                            <input type="text" class="form-control datepicker" id="departure" placeholder="Departure Date">
+                        </div>
+                        <div class="col-lg-2">
+                            <label for="datepicker">Adults:</label>
+                            <input type="number" class="form-control" id="numberInput" min="1" max="8" placeholder="Enter a number">
+                        </div>
+                        <div class="col-lg-2">
+                            <label for="datepicker">Children:</label>
+                            <input type="number" class="form-control" id="numberInput" min="1" max="8" placeholder="Enter a number">
+                        </div>
+                        <div class="col-lg-2">
+                            <button type="button" class="btn btn-brown mt-3 text-light">Check Avilability</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
+        <!-- Main content area -->
         <main>
-           <section class="jumbotron text-center">
-               <div class="container">
-                   <div class="row justify-content-md-center">
-                       <div class="slogan col-md-3">
-                   <h1 class="jumbotron-heading">Emerald</h1>
-                   <h2>Haven</h2>
-                   <h5>hotel</h5>
-                   <p class="lead text-muted">hotel</p>
-                   <p>
-                       <a href="#" class="btn btn-secondary my-2">Book Now</a>
-                   </p>
-                   </div></div>
-               </div>
-            </section>
+            <!-- Inreoduce to the hotel -->
+            <div class="container">
+                <div class="row introduction py-5">
+                    <div class="col-lg-6">
+                        <div class="position-relative">
+                            <img src="images/hotel/emerald_hotel_from_dining.png" class="img_bg" alt="" />
+                            <img src="images/hotel/emerald_hotel_spa.png" class="img_fr" alt="" />
+                            <div class="overlay_promo p-3">
+                                <h5 class="fw-bold text-light">Luxury Dining</h5>
+                                <p class="text-light fw-light ">Dine in luxury at the Emerald Have, where fine taste meets panoramic elegance.</p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class="col-lg-6">
+                        <h6 class="fw-bold">Emeral Haven Hotel</h6>
+                        <h1 class="fw-bold lh-1 pe-5 ">Your Gateway to Ireland’s Natural Splendor.</h1>
+                        <p class="py-4">Nestled amidst the lush landscapes of Ireland, Emerald Have Hotel offers a serene retreat with breathtaking views and eco-friendly luxury. Experience the charm of modern elegance blended seamlessly with the unspoiled beauty of the Irish countryside at your doorstep.</p>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="container">
+                <div class="row room-offer d-flex justify-content-between">
+                    <!-- Standard Room Offer -->
+                    <h6 class="text-center fw-bold">Our Rooms</h6>
+                    <h1 class="text-center fw-bolder pb-5">Explore Our <span>Rooms</span></h1>
+                    <div class="col-lg-3 room overflow-hidden shadow px-0 pb-3">
+                        <div class="position-relative">
+                            <img src="images/room/lux.png" class="img-fluid" alt="" />
+                            <small class="position-absolute start-0 top-100 translate-middle-y btn-brown text-light py-1 px-4 ms-4">
+                                149e / Night
+                            </small>
+                         </div>
+                        <div class="d-flex p-4 mt-1 pb-0">
+                            <h4 class="fw-bold">Standard Suite</h4>
+                            <div class="pt-1 ms-3">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between px-4 my-2">
+                            <div class="d-flex"><i class="fas fa-bed mt-1"></i><p class="border-right px-2">1 Bed</p></div>
+                            <div class="d-flex"><i class="fa-solid fa-bath mt-1"></i><p class="border-right px-2">1 Bath</p></div>
+                            <div class="d-flex"><i class="fas fa-wifi mt-1"></i><p class="border-right px-2">WiFi</p></div>
+                        </div>
+                        <div class="px-4">
+                            <p>Our standard room offers a queen-sized bed, private bathroom, Wi-Fi, and a flat-screen TV. It includes daily housekeeping and air conditioning, ideal for comfort and convenience.</p>
+                        </div>
+                        <div class="d-flex btn-group px-4" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">View Details</button>
+                            <button type="button" class="btn btn-secondary bg-warning text-dark">Book Now</button>
+                        </div>
+                    </div>
+                    <!-- Kindg Room Offer -->
+                     <div class="col-lg-3 room overflow-hidden shadow px-0">
+                        <div class="position-relative">
+                            <img src="images/room/royal.png" class="img-fluid" alt="" />
+                            <small class="position-absolute start-0 top-100 translate-middle-y btn-brown text-light py-1 px-4 ms-4">
+                                499e / Night
+                            </small>
+                         </div>
+                        <div class="d-flex p-4 mt-1 pb-0">
+                            <h4 class="fw-bold">King Suite</h4>
+                            <div class="pt-1 ms-3">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between px-4 my-2">
+                            <div class="d-flex"><i class="fas fa-bed mt-1"></i><p class="border-right px-2">4 Bed</p></div>
+                            <div class="d-flex"><i class="fa-solid fa-bath mt-1"></i><p class="border-right px-2">3 Bath</p></div>
+                            <div class="d-flex"><i class="fas fa-wifi mt-1"></i><p class="border-right px-2">WiFi</p></div>
+                        </div>
+                        <div class="px-4">
+                            <p>Our standard room offers a queen-sized bed, private bathroom, Wi-Fi, and a flat-screen TV. It includes daily housekeeping and air conditioning, ideal for comfort and convenience.</p>
+                        </div>
+                        <div class="d-flex btn-group px-4" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">View Details</button>
+                            <button type="button" class="btn btn-secondary bg-warning text-dark">Book Now</button>
+                        </div>
+                    </div>
+                    <!-- Royal Room Offer -->
+                    <div class="col-lg-3 room overflow-hidden shadow px-0">
+                        <div class="position-relative">
+                            <img src="images/room/royal.png" class="img-fluid" alt="" />
+                            <small class="position-absolute start-0 top-100 translate-middle-y btn-brown text-light py-1 px-4 ms-4">
+                                249e / Night
+                            </small>
+                         </div>
+                        <div class="d-flex p-4 mt-1 pb-0">
+                            <h4 class="fw-bold">Royal Suite</h4>
+                            <div class="pt-1 ms-3">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between px-4 my-2">
+                            <div class="d-flex"><i class="fas fa-bed mt-1"></i><p class="border-right px-2">2 Bed</p></div>
+                            <div class="d-flex"><i class="fa-solid fa-bath mt-1"></i><p class="border-right px-2">2 Bath</p></div>
+                            <div class="d-flex"><i class="fas fa-wifi mt-1"></i><p class="border-right px-2">WiFi</p></div>
+                        </div>
+                        <div class="px-4">
+                            <p>Our standard room offers a queen-sized bed, private bathroom, Wi-Fi, and a flat-screen TV. It includes daily housekeeping and air conditioning, ideal for comfort and convenience.</p>
+                        </div>
+                        <div class="d-flex btn-group px-4" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">View Details</button>
+                            <button type="button" class="btn btn-secondary bg-warning text-dark">Book Now</button>
+                        </div>
+                    </div>
+                   
+             
+                  
+                    
+                </div>
+            </div>
+        
+            
+            
+            
+            
+            
         </main>
-   
-        <footer>
-        </footer>
+         <script>
+            $(document).ready(function(){
+                $('#arrival').datepicker();
+                $('#departure').datepicker();
+            });
+        </script>
         <!-- Include boostrap JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <!-- Include the datepicker JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+        <script src="https://kit.fontawesome.com/190bcd2815.js" crossorigin="anonymous"></script>
+        
     </body>
 </html>
