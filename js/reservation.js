@@ -73,7 +73,7 @@ function price() {
     var fridays = getDaysBetweenDates(start, future, 5) * dayrates[5];
     var saturdays = getDaysBetweenDates(start, future, 6) * dayrates[6];
 
-    document.getElementById("price").value = "Purchase $" + (sundays + mondays + tuesdays + wednesdays + thursdays + fridays + saturdays);
+    document.getElementById("price").value = "Purchase €" + (sundays + mondays + tuesdays + wednesdays + thursdays + fridays + saturdays);
 }
 
 
