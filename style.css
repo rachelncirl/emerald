@@ -211,3 +211,1771 @@ body {
 .padded-top {
     padding-top: 50px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS Contact File*/
+      /* Section 1 Banner Contact Page*/
+      /*.banner{
+      }*/
+
+          /*.container-Banner{
+            }*/
+
+            /*.holder{}*/
+            /* Banner Image Holder */
+            .holder img{
+              max-height: 400px;
+              object-fit: cover;
+              position: sticky;  
+            }
+            /*.banner-img{
+            }*/
+
+              /* Contact text overly */
+            .overlay-text-contact{
+              position: absolute;
+              top: 60%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              font-size: 40px;
+              font-weight: bold;
+              color: #030303ad;
+            }
+            /* Rooms text overly*/
+            .overlay-text-Rooms{
+              position: absolute;
+              top: 50%;
+              left: 20%;
+              color: rgb(255, 255, 255);
+              transform: translate(-50%, -50%);
+            }
+
+ 
+
+
+
+      /* Section 1 Intro Contact Page*/
+      /*.intro{
+
+      }*/
+      /* intro content container*/
+          .container-Intro{
+            margin-right: 20%;
+            margin-left: 20%;
+            margin-bottom: 25px;
+            text-align: center;
+          }
+          /* intro content Head*/
+                  .Intro-Head{
+                    padding-top: 50px;
+                    padding-bottom: 50px;
+                    align-content: center;
+                  }
+          /* intro content Paragraph*/
+                .Intro-Paragraph{
+                  padding-left: 20%;
+                  padding-right: 20%;
+                  align-content: center;
+                  text-align: justify;
+                  padding-bottom: 25px;
+                
+                }
+
+
+
+
+
+      /* Section 2 Contact-Us Contact Page*/
+      /*.Contact-Us{
+
+      }*/
+            .container-Contact{
+              margin-top: 25px;
+              margin-bottom: 25px;
+              align-content: center;
+              padding: 10%, 50px;
+            }
+
+                  .contact-title{
+                    padding: 2.5%;
+                    margin-left: 25%;
+                  }
+
+                  .contact-left{
+                    margin-left: 20%;
+                    padding: 2.5%;
+                  }
+                  
+
+                    .contact-list{
+                      margin-left: 10%;
+                    }
+
+                    .contact-text{
+                      margin-top: 25px;
+                      margin-bottom: 25px;
+                      margin-left: 15%;
+                      align-content: left;
+                    }
+
+                    /*.map{
+
+                    }*/
+
+                    .directions-Btn-1{
+                      color: #1f3428;;
+                      padding: 15px;
+                      box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.74);
+                    }
+              
+
+
+
+      /*section 3 Getting There Contact Page-->*/
+      /*.getting-there{}*/
+
+                .container-getting-there{
+                padding-right: 20%;
+                padding: 20%;
+                margin-top: 50px;
+                padding-bottom: 50px;
+                padding-top: 50px;
+                color: #eae8e0;
+                background-color: #1f3428;
+              }
+
+                  .getting-there-Head{
+                    padding: 25px;
+                  }
+
+                  .getting-there-Body{
+                    padding-left: 10%;
+                    padding-right: 10%;
+                    align-content: center;
+                    text-align: justify;
+                  }
+
+                        .getting-there-Body-1-Title{
+                          margin-top: 25px;
+                          margin-bottom: 5px;
+                          text-align: center;
+                          }
+
+                  .getting-there-Body-1{
+                    margin-top: 25px;
+                    margin-bottom: 5px;
+                    text-align: center;
+                    align-content: center;
+                    }
+
+                    .getting-there-Body-1 .useful-link{
+                    font-size: 20px;
+                    }
+
+                    a{
+                      text-decoration: none;
+                      color: rgb(226, 221, 221);
+                    }
+
+
+
+
+      /*section 4 Get-In-Touch Contact PAge-->*/
+      /*.get-in-touch{  }*/
+
+              .container-get-in-touch{
+                margin-bottom: 50px;
+              }
+
+                  .container-get-in-touch-Intro{
+                    color:  #1f3428;
+                    text-decoration-color: #eae8e0 ;
+                    text-decoration-line:underline;
+                    }
+
+                  .Get-in-Touch-Left-img img{
+                    display: flex;
+                    height: 900px;
+                    object-fit: cover;
+                    overflow: hidden;
+                    }
+
+                  .Get-in-Touch-Head{
+                    margin-bottom: 2.5px;
+                  }
+
+              .Get-in-Touch-Left{
+                padding-left: 50px;
+                margin-left: 25%;
+                margin-bottom: 25px;
+              }
+
+                    .container-form{
+                      margin-left: 5%;
+                      margin-right: 35%;
+                      margin-bottom: 25px;
+                    }
+
+                    input[type=text], select, textarea {
+                      width: 100%;
+                      padding: 12px;
+                      border: 1px solid #ccc;
+                      border-radius: 4px;
+                      box-sizing: border-box;
+                      margin-top: 6px;
+                      margin-bottom: 16px;
+                      resize: vertical;
+                    }
+                    
+                    input[type=submit] {
+                      background-color: #1f3428;
+                      color: white;
+                      padding: 12px 20px;
+                      border: none;
+                      border-radius: 4px;
+                      cursor: pointer;
+                    }
+
+                    .directions-Btn-2{
+                      color: #93b19f;;
+                      padding: 15px;
+                      box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.74);
+                    }
+                    
+                    input[type=submit]:hover {
+                      background-color: #3a644c;
+                      box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+                    }
+
+
+
+
+      /*section 5 Get In the Know Contact Page*/
+      /*.get-in-know{}*/
+
+      
+              
+            .container-get-in-know-out{
+              margin-top: -60px;
+              }
+
+                .container-get-in-know{
+                  padding-top: 5%;
+                  padding-bottom: 5%x;
+                    margin-right: 20%;
+                    margin-left: 20%;
+                    margin-bottom: 25px;
+                    margin-top: 15px;
+                    margin-bottom: 100px;
+                    background-color:#1f3428bd;
+                    padding: 20px;
+                }
+
+                        /*.container-deal{}*/
+
+                        /*.deal-overlay{}*/
+
+                        /*.img-deal{}*/
+
+                        /*.banner-img-deal{}*/
+
+                        /*.holder-deal{}*/
+
+                        /*.get-in-know{}*/
+
+                        .container-get-in-know{
+                          display: block;
+                          padding: 10px;
+                          align-content: center;
+                        }
+
+                              .get-in-know-head{
+                                padding-top: 50px;
+                                padding-bottom: 25px;
+                              }
+                              .get-in-know-text{
+                                padding: 5px;
+                              }
+                              .get-in-know-buttons{
+                                  align-content: center;
+                                  vertical-align:middle; 
+                                  padding: 5px;
+                              }
+
+                              .get-in-know-text{
+                                text-align: justify;
+                                padding-left: 5%;
+                                padding-right: 5%;
+                              }
+                              
+                              @media (max-width: 900px) {
+                                .get-in-know-text {
+                                  display: none;
+                                }
+                              }
+
+                              .get-in-know-button{
+                                vertical-align:middle; 
+                                color: #93b19f;;
+                                padding: 15px;
+                                box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.74);
+                              }
+
+                              .get-in-know-button:hover{
+                                background-color: #3a644c;
+                                box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+                              }
+
+
+                        p{
+                          justify-content: left;
+                        }
+
+
+
+/* CSS Room Page*/  
+/* Section 2 Intro Room Page*/
+
+.useful-links{
+  color: rgb(20, 19, 19);
+}
+
+.lost-found{
+                          color: rgb(19, 17, 17);
+                        }
+
+.lost-found-holderr{
+  max-height: 1000px;
+  width: 100%;
+  object-fit: contain;
+  padding-left: 20%;
+  padding-right: 20%;
+  align-content: center;
+}            
+
+
+.lost-found-banner-img{
+position: relative;
+height: 1000px;
+max-width: 100%;
+}
+
+
+
+.lost-found-modal{
+  position: relative;
+  height: 500px;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: #1e3127e1;
+  border-radius: 50px;
+  align-content: top;
+  margin-top: -900px;
+  padding: 50px;
+  vertical-align: top;
+
+
+  }
+
+
+  .lost-found-header{
+    color: #bbb;
+    text-align: center;
+    vertical-align: text-top;
+    padding-top: 50px;
+  }
+
+
+  .lost-found-body{
+    color: #bbb;
+    text-align: justify;
+    font-size: 15px;
+    line-height: 33px;
+    padding-left: 10%;
+    padding-right: 10%;
+ }
+
+
+ .lost-found-Btn-2{
+  align-content: center;
+  margin-top: 40px;
+  margin-left: 40px;
+  padding: 10px;
+ }
+
+
+
+
+
+
+
+
+/* CSS Room Page*/  
+/* Section 2 Intro Room Page*/
+  /*.container-Banner{}*/
+
+
+          /*.holder{}*/
+
+          .banner-img{
+            width: 100%;
+            height: 500px;
+          }
+
+            /*.overlay-text-Rooms{}*/
+
+
+
+ /*  text-section2: OurRooms :Room Page */          
+/*.ourrooms{}*/
+
+            .container-ourRooms{
+                padding: 20%, 50px;
+                margin-right: 20%;
+                margin-left: 20%;
+              }
+
+                        .head-ourRooms{
+                            padding-bottom: 35px;
+                            text-align: center;
+                          }
+                    
+                        .body-ourRooms{
+                            padding-left: 14%;
+                            padding-right: 14%;
+                            align-content: center;
+                            text-align: justify;
+                          }
+
+
+
+
+/* section 3 Specialoffers : Room Page*/
+  /*.specialOffers{}*/
+
+
+      .container-specialOffers{
+         padding: 20%, 25px;
+         margin-left: 1%;
+         margin-right: 1%;
+         margin-top: 50px;
+         margin-bottom: 50px;
+        }
+
+              .head-specialOffers{
+                  padding-top: 5px;
+                  padding-bottom: 5px;
+                  text-align: center;
+                }
+
+              /*.body-specialOffers{}*/
+
+                      .card-specialOffers{
+                        width: 100%;
+                        height: 800px;
+                        margin-top: 15px;
+                        margin-bottom: 15px;
+                        background-color: #d6d1d1;    
+                      }
+
+                        /* Change background color of buttons on hover */
+                      .card-specialOffers:hover {
+                        box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+                        }
+
+
+                      .card-specialOffers-image{
+                        width: 100%;
+                        height: 300px;
+                        }
+
+                      .card-img-top{
+                          width: 100%;
+                          height: 300px;
+                          object-fit: cover;
+                          padding-bottom: 10px;
+                        }
+
+                      .card-specialOffers-body{
+                        padding-top: 5px;
+                        margin-top: 5px;
+                        margin-bottom: 5px;
+                        height: 310px;
+                    
+                      }
+
+                          .card-specialOffers-body .card-specialOffers-title{
+                              margin-top: 25px;
+                              padding: 20px;
+                              margin-left: 10%;
+                              margin-right: 10%;
+                              text-align: center;
+                              height: 200px;  
+                            }
+
+                            .card-specialOffers-body{
+                              padding: 2.5px;
+                              text-align: center;
+                            }
+
+                                      /* Style the tab 0 */
+                                        .tab {
+                                        overflow: hidden;
+                                        border: 1px solid #ccc;
+                                        background-color: #dbd8d8;
+                                      }
+
+                                      /* Style the buttons inside the tab */
+                                      .card-specialOffers-body .tab button {
+                                      background-color: inherit;
+                                      width: 50%;
+                                      float: left;
+                                      border: none;
+                                      outline: none;
+                                      cursor: pointer;
+                                      padding: 14px 16px;
+                                      transition: 0.3s;
+                                      font-size: 17px;
+                                    }
+
+                                                /* Change background color of buttons on hover */
+                                                .card-specialOffers-body .tab button:hover {
+                                                  background-color: #ddd;
+                                                }
+
+                                                /* Create an active/current tablink class */
+                                                .card-specialOffers-body .tab button.active {
+                                                  background-color: #ccc;
+                                                }
+
+                                      /* Style the tab content */
+                                      .tabcontent {
+                                        display: none;
+                                        padding: 2.5px 2.5px;
+                                        border: 1px solid #ccc;
+                                        background-color: #ccc;
+                                        border-top: none;
+                                      }
+
+
+
+
+                                      /* Style the tab 1*/
+                                      .card-specialOffers-body .tab1 {
+                                        overflow: hidden;
+                                        border: 1px solid #ccc;
+                                        background-color: #dbd8d8;
+                                        text-align: center;
+                                        align-content: center;
+                                      }
+                                  
+                                              /* Style the buttons inside the tab */
+                                              .card-specialOffers-body .tab1 button {
+                                                background-color: inherit;
+                                                width: 50%;
+                                                float: left;
+                                                border: none;
+                                                outline: none;
+                                                cursor: pointer;
+                                                padding: 14px 16px;
+                                                transition: 0.3s;
+                                                font-size: 17px;
+                                              }
+                                          
+                                                    /* Change background color of buttons on hover */
+                                                    .card-specialOffers-body .tab1 button:hover {
+                                                      background-color: #ddd;
+                                                    }
+                                                
+                                                    /* Create an active/current tablink class */
+                                                    .card-specialOffers-body .tab1 button.active {
+                                                    background-color: #ccc;
+                                                      }
+                                
+                                      /* Style the tab content */
+                                      .tabcontent1 {
+                                        padding: 2.5px 2.5px;
+                                        border: 1px solid #ccc;
+                                        background-color: #ccc;
+                                        border-top: none;
+                                    }
+  
+  
+
+
+
+                                      /* Style the tab 2 */
+                                          .card-specialOffers-body .tab2 {
+                                            overflow: hidden;
+                                            border: 1px solid #ccc;
+                                            background-color: #dbd8d8;
+                                            text-align: center;
+                                            align-content: center;
+                                      }
+                                      
+                                          /* Style the buttons inside the tab */
+                                                .card-specialOffers-body .tab2 button {
+                                                background-color: inherit;
+                                                width: 50%;
+                                                float: left;
+                                                border: none;
+                                                outline: none;
+                                                cursor: pointer;
+                                                padding: 14px 16px;
+                                                transition: 0.3s;
+                                                font-size: 17px;
+                                          }
+                                          
+                                                  /* Change background color of buttons on hover */
+                                                      .card-specialOffers-body .tab2 button:hover {
+                                                        background-color: #ddd;
+                                                  }
+                                                  
+                                                  /* Create an active/current tablink class */
+                                                      .card-specialOffers-body .tab2 button.active {
+                                                      background-color: #ccc;
+                                                  }
+                                        
+                                          /* Style the tab content */
+                                              .tabcontent2 {
+                                                padding: 2.5px 2.5px;
+                                                border: 1px solid #ccc;
+                                                background-color: #ccc;
+                                                border-top: none;
+                                          }
+
+
+
+
+
+
+                                          /* Style the tab */
+                                              .card-specialOffers-body .tab3 {
+                                                overflow: hidden;
+                                                border: 1px solid #ccc;
+                                                background-color: #dbd8d8;
+                                                text-align: center;
+                                                align-content: center;
+                                          }
+
+                                          /* Style the buttons inside the tab */
+                                              .card-specialOffers-body .tab3 button {
+                                                  background-color: inherit;
+                                                  width: 50%;
+                                                  float: left;
+                                                  border: none;
+                                                  outline: none;
+                                                  cursor: pointer;
+                                                  padding: 14px 16px;
+                                                  transition: 0.3s;
+                                                  font-size: 17px;
+                                          }
+
+                                                  /* Change background color of buttons on hover */
+                                                      .card-specialOffers-body .tab3 button:hover {
+                                                            background-color: #ddd;
+                                                          }
+
+                                                  /* Create an active/current tablink class */
+                                                      .card-specialOffers-body .tab3 button.active {
+                                                          background-color: #ccc;
+                                                        }
+
+                                          /* Style the tab content */
+                                              .tabcontent3 {
+                                                padding: 2.5px 2.5px;
+                                                border: 1px solid #ccc;
+                                                background-color: #ccc;
+                                                border-top: none;
+                                              }
+
+
+
+
+
+                                            /* Style the tab 4*/
+                                              .card-specialOffers-body .tab4 {
+                                              overflow: hidden;
+                                              border: 1px solid #ccc;
+                                              background-color: #dbd8d8;
+                                              text-align: center;
+                                              align-content: center;
+                                            }
+                                            
+                                                  /* Style the buttons inside the tab */
+                                                  .card-specialOffers-body .tab4 button {
+                                                    background-color: inherit;
+                                                    width: 50%;
+                                                    float: left;
+                                                    border: none;
+                                                    outline: none;
+                                                    cursor: pointer;
+                                                    padding: 14px 16px;
+                                                    transition: 0.3s;
+                                                    font-size: 17px;
+                                                  }
+                                                  
+                                                            /* Change background color of buttons on hover */
+                                                            .card-specialOffers-body .tab4 button:hover {
+                                                              background-color: #ddd;
+                                                            }
+                                                            
+                                                            /* Create an active/current tablink class */
+                                                            .card-specialOffers-body .tab4 button.active {
+                                                              background-color: #ccc;
+                                                            }
+                                                  
+                                                  /* Style the tab content */
+                                                  .tabcontent4 {
+                                                    padding: 2.5px 2.5px;
+                                                    border: 1px solid #ccc;
+                                                    background-color: #ccc;
+                                                    border-top: none;
+                                                  }
+        
+  
+
+
+
+
+                                              /* Style the tab */
+                                              .card-specialOffers-body .tab5 {
+                                                overflow: hidden;
+                                                border: 1px solid #ccc;
+                                                background-color: #dbd8d8;
+                                                text-align: center;
+                                                align-content: center;
+                                              }
+                                              
+                                                      /* Style the buttons inside the tab */
+                                                      .card-specialOffers-body .tab5 button {
+                                                        background-color: inherit;
+                                                        width: 50%;
+                                                        float: left;
+                                                        border: none;
+                                                        outline: none;
+                                                        cursor: pointer;
+                                                        padding: 14px 16px;
+                                                        transition: 0.3s;
+                                                        font-size: 17px;
+                                                      }
+                                                      
+                                                                /* Change background color of buttons on hover */
+                                                                .card-specialOffers-body .tab5 button:hover {
+                                                                  background-color: #ddd;
+                                                                }
+                                                                
+                                                                /* Create an active/current tablink class */
+                                                                .card-specialOffers-body .tab5 button.active {
+                                                                  background-color: #ccc;
+                                                                }
+                                                      
+                                                      /* Style the tab content */
+                                                      .tabcontent5 {
+                                                        padding: 2.5px 2.5px;
+                                                        border: 1px solid #ccc;
+                                                        background-color: #ccc;
+                                                        border-top: none;
+                                                      }
+
+  
+
+
+                        /* Style the tab */
+                        .card-specialOffers-6{
+                                max-height: 1200px;
+                                margin-top: 15px;
+                                margin-bottom: 50px;
+                                background-color: #d6d1d1;  
+                        }
+
+
+                                .card-specialOffers-body .tab6 {
+                                  overflow: hidden;
+                                  border: 1px solid #ccc;
+                                  background-color: #dbd8d8;
+                                  text-align: center;
+                                  align-content: center;
+                                }
+
+                                                  /* Style the buttons inside the tab */
+                                                  .card-specialOffers-body .tab6 button {
+                                                    background-color: inherit;
+                                                    width: 50%;
+                                                    float: left;
+                                                    border: none;
+                                                    outline: none;
+                                                    cursor: pointer;
+                                                    padding: 14px 16px;
+                                                    transition: 0.3s;
+                                                    font-size: 17px;
+                                                  }
+
+                                                                    /* Change background color of buttons on hover */
+                                                                    .card-specialOffers-body .tab6 button:hover {
+                                                                      background-color: #ddd;
+                                                                    }
+
+                                                                    /* Create an active/current tablink class */
+                                                                    .card-specialOffers-body .tab6 button.active {
+                                                                      background-color: #ccc;
+                                                                    }
+
+                                                  /* Style the tab content */
+                                                  .tabcontent6 {
+                                                    padding: 2.5px 2.5px;
+                                                    border: 1px solid #ccc;
+                                                    background-color: #ccc;
+                                                    padding-left: 10%;
+                                                    padding-right: 10%;
+                                                    max-height: 500px;
+                                                  }
+
+  
+
+
+
+                        /*Content Within Tabs*/
+                        /*Tab-1 Content*/
+                            .Your-Room-head{
+                                  padding-top: 10px;
+                                  padding-bottom: 10px;
+                                }
+
+                            .Your-Room-text{
+                                text-align: justify;
+                                padding-top: 4px;
+                                padding-bottom: 10px;
+                                padding-left: 5%;
+                                padding-right: 5%;
+                                font-size: 15px;
+                                line-height: 24px;
+
+                              }
+
+
+                      /*Tab-2 Content*/
+                            .card-Your-Benifits{
+                                  width: auto;
+                                  height: 190px;
+                                  padding-left: 5px;
+                                  padding-right: 5px;
+                                  padding-bottom: 10px;
+                                  background-color: #faf9f9;
+                                  border-width: 1px;
+                                  border-style: solid;
+                                  border-color: rgb(120, 120, 122);
+                                  align-content: center;
+                      }
+
+                          .card-Your-Benifits-image{
+                            width: 35px;
+                            height: 35px;
+                            padding-left: 5px;
+                            padding-right: 5px;
+                            margin-left: 10%;
+                            margin-right: 10%;
+                            object-fit: cover;
+                            align-content: center;
+                            }
+
+                                  .card-Your-Benifits-header{
+                                    margin-top: 1.25px;
+                                    padding: 1.25px;
+                                    margin-left: 10%;
+                                    margin-right: 10%;
+                                    text-align: center;
+                                    align-content: center;
+                                    font-size: 15px;
+                                  }
+
+
+                                  .card-Your-Benifits-body{
+                                    margin-top: 1.25px;
+                                    padding: 1.25px;
+                                    margin-left: 10%;
+                                    margin-right: 10%;
+                                    text-align: center;
+                                    align-content: center;
+                                    font-size: 12px;
+                                    }
+
+
+
+
+/* section 4 Testimonials Room Page*/
+.container-testimonials{
+  margin-top: 200px;
+}
+
+                .testimonials-box{
+                  width: 100%;
+                  background-color: #1f3528;
+                  padding-top: 10px, ;
+                  padding-bottom: 10px, ;
+                  padding-left: 10%, ;
+                  padding-right: 10%, ;
+                  align-content: center;
+                  margin-top: -75px;
+                  }
+
+                            .testimonials-header{
+                                text-align: center;
+                                color: #d6d1d1;
+                                margin: 25px;
+                                margin-top: 100px;
+                                padding: 5px;
+                              }
+
+                            .testimonials-content{
+                                background-color: #1f3528;
+                                text-align: center;
+                                margin-left: 10%;
+                                margin-right: 10%;
+                                margin-top: 5px;
+                                margin-bottom: 5px;
+                                padding: 5px;
+                              }
+
+                                      .testimonials-card{
+                                          background-color: #f4faf7;
+                                          width: 60%;
+                                          margin-left: 20%;
+                                          margin-right: 20%;
+                                          margin-top: 2.5px;
+                                          margin-bottom: 2.5px;
+                                          padding: 20px;
+                                          }
+
+                                      .testimonials-card:hover {
+                                      box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+                                      }
+
+                                                  .testimonials-text-box{
+                                                    text-align: justify;
+                                                    padding-left: 5%;
+                                                    padding-right: 5%;
+                                                  }
+
+                                                /* hide text-box on small screens*/
+                                                @media (max-width: 900px) {
+                                                  .testimonials-text-box {
+                                                    display: none;
+                                                    }
+                                                  }
+
+
+                                    /* slideshow : section 4 Testimonials*/
+                                    /* hide slides not selected*/
+                                    .mySlides {display: none}
+
+                                    .slideshow-container {
+                                    max-width: 1000px;
+                                    position: relative;
+                                    margin: auto;
+                                    }
+
+
+
+                                    /* slideshow navigation buttons*/
+                                        .prev, .next {
+                                          cursor: pointer;
+                                          position: sticky;
+                                          top: 50%;
+                                          width: auto;
+                                          padding-left: 140px;
+                                          padding-right: 140px;
+                                          color: white;
+                                          font-weight: bold;
+                                          font-size: 50px;
+                                          transition: 0.6s ease;
+                                          border-radius: 0 3px 3px 0;
+                                          user-select: none;
+                                            }
+
+
+                                        /* slideshow navigation buttons*/
+                                          .next {
+                                                right: 0;
+                                                border-radius: 3px 0 0 3px;
+                                                }
+
+                                          .prev:hover, .next:hover {
+                                                background-color: rgba(0,0,0,0.8);
+                                                }
+
+                                  
+
+                                        /* slideshow progression status dots*/
+                                            .dot {
+                                                cursor: pointer;
+                                                height: 15px;
+                                                width: 15px;
+                                                margin: 0 2px;
+                                                background-color: #bbb;
+                                                border-radius: 50%;
+                                                display: inline-block;
+                                                transition: background-color 0.6s ease;
+                                                margin-bottom: 25px;
+                                                }
+
+                                              .active, .dot:hover {
+                                                background-color: #71717188;
+                                                }
+
+
+
+
+          
+
+/*section 5: deal-overlay Room Page*/
+/*.deal{}*/
+
+
+                  .container-deal{
+                  padding: 20%, 50px;
+                  background-color: rgb(49, 47, 47);
+                  width: 100%;
+                  height: 600px;
+                  display: flex;
+                  flex-wrap: wrap;
+                }
+
+                            /* background colour oveerlay*/
+                          .deal-overlay{
+                            padding: 20%, 50px;
+                            width: 100%;
+                            min-height: 600px;
+                            background-color:  #1f3428bd;
+                            position: absolute;
+                          }
+
+                          /* background image*/
+                          .img-deal{
+                            width: 100%;
+                            height: 600px;
+                            object-fit: cover;
+                            vertical-align: text-top;
+                          }
+
+                                      .banner-img-deal{
+                                        width: 100%;
+                                        height: 600px;
+                                        object-fit: cover;
+                                        vertical-align: text-top;
+                                        padding-bottom: 10px;
+                                      }
+
+
+
+
+                                      .holder-deal{
+                                        padding: 20%, 50px;
+                                        margin-right: 10%;
+                                        margin-left: 10%;
+                                        margin-bottom: 25px;
+                                        color: #f2f2f2;
+                                        transform: translate(0%, -120%);  
+                                        }
+                                        .deal-col{
+                                            padding-left:1.5%;
+                                            padding-right:1.5%;
+                                            margin-left:2.5%;
+                                            margin-right:2.5%;
+                                          }
+
+
+                                          /* discover button*/
+                                          .discover-more{
+                                            color: #f2f2f2;
+                                            font-size: 30px;
+                                            text-decoration: underline;
+                                            text-decoration-thickness: 1px;
+                                            }
+
+                                          .discover-more:hover {
+                                            color: #d8d6d6;
+                                            font-size: 35px;
+                                          }
+
+
+
+                                          /* hide right col on small screens*/
+                                          @media (max-width: 900px) {
+                                            .deal-col-right-p {
+                                                display: none;
+                                              }
+                                            }
+
+
+
+
+             
+
+
+/*CSS Gallery Page*/
+
+
+
+/*.holder{}*/
+
+.banner-img{
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  margin-bottom: 150px;
+}
+
+.banner-img:hover{
+  transform: scale(1.01);                                                                               
+  transition: 1.5s ease-in;
+  transition: 1.5s ease-out;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.overlay-text-gallery-banner{
+  color: rgba(0, 0, 0, 0.63);
+  text-align: center;  
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+/*section 2: intro-gallery :Gallery Page*/
+/*.container-Intro{}*/
+
+                /*.Intro-Head-gallery{
+                  
+                }*/
+
+
+
+
+
+
+.gallery-fit{
+margin-top: 150px;
+margin-right: 5%;
+margin-left: 5%;
+}
+
+    /*.container-gallery-fit{}*/
+
+  
+    /*Expandable Image CSS*/
+          .row-1{
+            display:flex;
+          }
+          
+                .img-grid img{
+                  margin-bottom: 15px;
+                  transition: 0.5s ease;
+                }
+                
+                .img-grid img:hover {
+                  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+                }
+
+
+                      .column-fit-image {
+                        padding-left: 15px;
+                      }
+
+
+                              .column-fit-image img{
+                                width: 100%;
+                                height: 100%;
+                              }
+
+                                      /*.row-2{
+                                      }*/
+
+                                          .gallery{
+                                                position: relative;
+                                                width: 100%;
+                                                max-width: 400px;
+                                              }
+
+
+
+                      .overlay{
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        height: 96%;
+                        width: 100%;
+                        margin-bottom: -5px;
+                        opacity: 0;
+                        transition: .3s ease;
+                        background-color: #717171bb;
+                      }
+
+                                                  .gallery:hover .overlay{
+                                                    opacity: 1;
+                                                  }
+
+                                                  .icon {
+                                                    color: white;
+                                                    font-size: 100px;
+                                                    position: absolute;
+                                                    top: 50%;
+                                                    left: 50%;
+                                                    transform: translate(-50%, -50%);
+                                                    -ms-transform: translate(-50%, -50%);
+                                                    text-align: center;
+                                                  }
+
+                                                        .fa-user:hover {
+                                                          color: #eee;
+                                                        }
+
+                                    .modal-pop-up{
+                                      max-height: auto;
+                                      width: 100%;
+                                      align-content: center;
+                                      vertical-align:middle;
+                                      display: flex;
+                                      margin-bottom: 50px;
+                                      align-content: center; 
+                                      background-color: #717171b0;
+
+                                    }
+                                                .modal{
+                                                  display:none;
+                                                  position: absolute;
+                                                  left: 0;
+                                                  top: 0;
+                                                  max-height: auto;
+                                                  width: 100%;
+                                                  background-color: #717171b0;
+                                                  align-content: center;                                                                                       
+
+                                                }
+
+                                                        .modal .modal-content{
+                                                          flex-direction: column;
+                                                          width: 100%;
+                                                          max-height: auto;
+                                                          pointer-events: auto;
+                                                          background-color: #717171b0;
+                                                          padding-top: 2.5%;
+                                                          padding-left: 2.5%;
+                                                          padding-right: 2.5%;
+                                                          padding-bottom: 2.5%;
+                                                          align-content: center; 
+                                                          position: relative;                                                                                      
+
+                                                        }
+
+                                                                              .modal .modal-header{
+                                                                                display: flex;
+                                                                                align-items: flex-start;
+                                                                                vertical-align: top;
+                                                                                background-color: #717171b0;
+                                                                              }
+
+                                                                                            .close{
+                                                                                              color:#030303;
+                                                                                              position: absolute;
+                                                                                              top: -25px;
+                                                                                              right: 25px;
+                                                                                              font-size: 8rem;
+                                                                                              font-weight: 100;
+                                                                                              cursor: pointer;
+                                                                                              opacity: 0.5;
+                                                                                              transition: 0.3s ease;
+                                                                                              vertical-align: top;
+                                                                                              outline: #030303;
+                                                                                              outline-width: 2px;
+                                                                                            }
+
+                                                                                            .close:hover{
+                                                                                              color:#807e7e;
+                                                                                              font-weight: 500;
+                                                                                              opacity: 0.75;
+                                                                                              background-color: #242323f1;
+                                                                                            }
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          .modal-body{
+                                                                            display: flex;
+                                                                            object-fit: cover;  
+                                                                            max-height: auto;
+                                                                            text-align: center; 
+                                                                            align-content: center; 
+                                                                            background-color: #717171b0                                                                                              
+                                                                          }
+                                                                                            .my-slides {
+                                                                                              position: relative;                                                                                            
+                                                                                              max-height: auto;
+                                                                                              width: 100%; 
+                                                                                              align-content: center;
+                                                                                              background-color: #717171b0;
+                                                                                            }
+
+
+
+                                                                                            .my-slides-text{
+                                                                                              position: relative;
+                                                                                              top: 50%;
+                                                                                              left: 20%;
+                                                                                              color: rgb(255, 255, 255);
+                                                                                              transform: translate(-50%, -50%);
+                                                                                            }
+
+                                                                                                                .my-slides img{
+                                                                                                                  max-height: 100%;
+                                                                                                                  width: 100%; 
+                                                                                                                  background-color: #717171b0;  
+                                                                                                                }
+
+                                                                                                                .my-slides img:hover{
+                                                                                                                  transform: scale(1.1);                                                                               
+                                                                                                                  transition: 1.5s ease-in;
+                                                                                                                  transition: 1.5s ease-out;
+                                                                                                                  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+                                                                                                                }
+
+                                                                                                                .image{
+                                                                                                                  max-height: 800px;
+                                                                                                                  width: 100%;
+                                                                                                                  align-content: center;
+                                                                                                                  position: relative;
+                                                                                                                  object-fit: contain;
+                                                                                                                  top: -25px;
+                                                                                                                  background-color: #717171b0;
+                                                                                                                  padding-left: 20px; 
+                                                                                                                  padding-right: 20px; 
+                                                                                                                  padding-bottom: 20px;
+                                                                                                                  vertical-align: middle; 
+
+                                                                                                                  
+                                                                                                                }
+
+                                                                                                                .image:hover{
+                                                                                                                  transform: scale(1.01);                                                                               
+                                                                                                                  transition: 1.5s ease-in;
+                                                                                                                  transition: 1.5s ease-out;
+                                                                                                                  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+                                                                                                                }
+                              /* slideshow navigation buttons*/
+                              .next {
+                                        cursor: pointer;
+                                        align-content: flex-end;
+                                        position: sticky;
+                                        padding-left: 900px;
+                                        left: 80%;                                  
+                                        width: auto;
+                                        padding: 0%;
+                                        color:#030303;
+                                        opacity: 0.5;
+                                        font-weight: bold;
+                                        font-size: 50px;
+                                        transition: 0.6s ease;
+                                        border-radius: 0 3px 3px 0;
+                                        user-select: none;
+                                          }
+
+                              .prev{
+                                cursor: pointer;
+                                align-content: flex-start;
+                                        position: sticky;
+                                        left: 10%; 
+                                        width: auto;
+                                        padding: 0%;
+                                        color:#030303;
+                                        opacity: 0.5;
+                                        font-weight: bold;
+                                        font-size: 50px;
+                                        transition: 0.6s ease;
+                                        border-radius: 0 3px 3px 0;
+                                        user-select: none;
+                              }
+
+
+                                      /* slideshow navigation buttons*/
+                                        .next {
+                                              right: 0;
+                                              border-radius: 3px 0 0 3px;
+                                              }
+
+                                        .prev:hover, .next:hover {
+                                              background-color: rgba(0,0,0,0.8);
+                                              color:#807e7e;
+                                              }  
+                                              
+                          .numbertext{
+                            display: hidden;
+                            color:#030303;
+                            position: absolute;                            
+                            right: 37%;
+                            left: 37%;
+                            top:-2px;
+                            font-size: 50px;
+                            font-weight: 100;
+                            opacity: 0.5;
+                            vertical-align: top;
+                            outline: #030303;
+                            outline-width: 2px;
+                            align-content: center;
+                            background-color: #99959548;
+
+                          }
+
+                          .modal-text{
+                            position: absolute;                            
+                            right: 43%;
+                            left: 10%;
+                           align-content: center;
+                            vertical-align: text-top;
+                  
+                            
+
+                          }
+                          .my-slides-text{
+                            text-align: center;
+                            font-size: 30px;
+                            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                            font-weight: 500;
+                            font-style: normal;
+                            color: #03030380;;
+                            position: relative;
+                            padding: 5px;
+                            background-color: #99959548;
+                          }
+
+
+/*.activities-banner{
+ 
+}*/
+
+
+.container-activityr{
+  align-content: center;
+ 
+}
+
+
+.holder-activity img{
+  max-height: 400px;
+  width: 100%;
+  object-fit: cover;
+  position: sticky;  
+}
+
+
+.overlay-text-activity{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    color: rgba(192, 196, 193, 0.774);
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+  }
+
+  .container-Activities{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 20%;
+    padding-right: 20%;
+    align-content: center;
+    
+  }
+
+
+  .head-Activities{
+    padding: 15px;
+    text-align: center;
+
+  }
+
+  .body-Activities{
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 20px;
+    padding-left: 15%;
+    padding-right: 15%;
+  
+  }
+
+
+
+
+  
+  .container-activities-1{
+    background-color: #1f3428;
+    height: 600px;
+    width: 100%;
+  }
+
+  .activities-1-img{
+    width: 100%;
+    object-fit: cover;
+    height:600px ;
+    padding-right: 50px;
+    
+  }
+
+  .activities-1-img img{
+    width: 100%;
+    object-fit: cover;
+    height:600px ;
+    overflow: hidden;
+  }
+  
+  
+  .activities-1-Head{
+    padding: 30px;
+    text-align: start;
+    color: #d6d1d1;
+  }
+
+
+  .container-activities-1{
+    color: #d6d1d1;
+    max-height: 600px;
+    overflow: hidden;
+    padding-right: 20px;
+    
+  }
+
+
+
+
+  /*.site -footer{
+ 
+}*/
+
+
+  .site-footer
+  {
+    background-color:#26272b;
+    padding:45px 0 20px;
+    font-size:15px;
+    line-height:24px;
+    color:#737373;
+  }
+  .site-footer hr
+  {
+    border-top-color:#bbb;
+    opacity:0.5
+  }
+  .site-footer hr.small
+  {
+    margin:20px 0
+  }
+  .site-footer h6
+  {
+    color:#fff;
+    font-size:16px;
+    text-transform:uppercase;
+    margin-top:5px;
+    letter-spacing:2px
+  }
+  .site-footer a
+  {
+    color:#737373;
+  }
+  .site-footer a:hover
+  {
+    color:#3366cc;
+    text-decoration:none;
+  }
+  .footer-links
+  {
+    padding-left:0;
+    list-style:none
+  }
+  .footer-links li
+  {
+    display:block
+  }
+  .footer-links a
+  {
+    color:#737373
+  }
+  .footer-links a:active,.footer-links a:focus,.footer-links a:hover
+  {
+    color:#3366cc;
+    text-decoration:none;
+  }
+  .footer-links.inline li
+  {
+    display:inline-block
+  }
+  .site-footer .social-icons
+  {
+    text-align:right
+  }
+  .site-footer .social-icons a
+  {
+    width:40px;
+    height:40px;
+    line-height:40px;
+    margin-left:6px;
+    margin-right:0;
+    border-radius:100%;
+    background-color:#33353d
+  }
+  .copyright-text
+  {
+    margin:0
+  }
+  @media (max-width:991px)
+  {
+    .site-footer [class^=col-]
+    {
+      margin-bottom:30px
+    }
+  }
+  @media (max-width:767px)
+  {
+    .site-footer
+    {
+      padding-bottom:0
+    }
+    .site-footer .copyright-text,.site-footer .social-icons
+    {
+      text-align:center
+    }
+  }
+  .social-icons
+  {
+    padding-left:0;
+    margin-bottom:0;
+    list-style:none
+  }
+  .social-icons li
+  {
+    display:inline-block;
+    margin-bottom:4px
+  }
+  .social-icons li.title
+  {
+    margin-right:15px;
+    text-transform:uppercase;
+    color:#96a2b2;
+    font-weight:700;
+    font-size:13px
+  }
+  .social-icons a{
+    background-color:#eceeef;
+    color:#818a91;
+    font-size:16px;
+    display:inline-block;
+    line-height:44px;
+    width:44px;
+    height:44px;
+    text-align:center;
+    margin-right:8px;
+    border-radius:100%;
+    -webkit-transition:all .2s linear;
+    -o-transition:all .2s linear;
+    transition:all .2s linear
+  }
+  .social-icons a:active,.social-icons a:focus,.social-icons a:hover
+  {
+    color:#fff;
+    background-color:#29aafe
+  }
+  .social-icons.size-sm a
+  {
+    line-height:34px;
+    height:34px;
+    width:34px;
+    font-size:14px
+  }
+  .social-icons a.facebook:hover
+  {
+    background-color:#3b5998
+  }
+  .social-icons a.twitter:hover
+  {
+    background-color:#00aced
+  }
+  .social-icons a.linkedin:hover
+  {
+    background-color:#007bb6
+  }
+  .social-icons a.dribbble:hover
+  {
+    background-color:#ea4c89
+  }
+  @media (max-width:767px)
+  {
+    .social-icons li.title
+    {
+      display:block;
+      margin-right:0;
+      font-weight:600
+    }
+  }
+
+
+  
