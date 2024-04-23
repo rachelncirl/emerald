@@ -1,5 +1,117 @@
 @import url("https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/blitzer/jquery-ui.min.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
+body {
+    background-color: #fff;
+    font-family: "Mulish", sans-serif;
+    color: #21382a;
+    margin: 0;
+}
+
+.btn-brown{
+    background-color: #AA8453
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    background-image: linear-gradient(#21382a, #1e3127);
+    border-bottom: 1px solid #eae8e0;
+    padding: 10px 20px; /* Consistent padding around elements */
+}
+
+.navbar a {
+    color: #eae8e0;
+    transition: color 0.3s; /* Smooth transition for hover effects */
+}
+
+.navbar a:hover,
+.navbar-nav .nav-link.active {
+    color: #FFCA2C;
+}
+
+.navbar li{
+    padding:0 10px;
+}
+
+.navbar .btn {
+    color: #1e3127;
+}
+
+.navbar .btn:hover {
+
+    color: #1e3127;
+}
+
+
+.navbar-brand p {
+    font-weight: 700;
+    padding-top:10px;
+}
+
+.navbar-brand img {
+    width: 17%;
+    float: left;
+    padding:5px 10px 5px 0 
+}
+
+.img-fluid{
+    height:200px !important;
+    width:100%;
+}
+
+ .fa-bed, .fa-bath, .fa-wifi,.room-offer span{
+    color: #AA8453
+}
+
+
+.bi-star-fill{
+    color:#F5C020
+}
+
+.green{
+    background-color: #1F3328
+}
+.slogan {
+    padding: 30px 0px;
+}
+.banner-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: 0% 50%;
+}
+
+
+.dark-container {
+    background-color: #eae8e0
+}
+
+.text-justify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.padded-text {
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+}
+
+.padded-margins {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.padded-bottom {
+    padding-bottom: 50px;
+}
+
+.padded-top {
+    padding-top: 50px;
+}
+
+/* Reservation Calendar */
 .ui-datepicker {
     width: 600px;
     height: 350px;
@@ -47,3 +159,168 @@
 .ui-widget {
     font-size: 100%
 }
+
+/* Footer Css*/
+.site-footer
+  {
+    background-color:#26272b;
+    padding:45px 0 20px;
+    font-size:15px;
+    line-height:24px;
+    color:#737373;
+  }
+  .site-footer hr
+  {
+    border-top-color:#bbb;
+    opacity:0.5
+  }
+  .site-footer hr.small
+  {
+    margin:20px 0
+  }
+  .site-footer h6
+  {
+    color:#fff;
+    font-size:16px;
+    text-transform:uppercase;
+    margin-top:5px;
+    letter-spacing:2px
+  }
+  .site-footer a
+  {
+    color:#737373;
+  }
+  .site-footer a:hover
+  {
+    color:#3366cc;
+    text-decoration:none;
+  }
+  .footer-links
+  {
+    padding-left:0;
+    list-style:none
+  }
+  .footer-links li
+  {
+    display:block
+  }
+  .footer-links a
+  {
+    color:#737373
+  }
+  .footer-links a:active,.footer-links a:focus,.footer-links a:hover
+  {
+    color:#3366cc;
+    text-decoration:none;
+  }
+  .footer-links.inline li
+  {
+    display:inline-block
+  }
+  .site-footer .social-icons
+  {
+    text-align:right
+  }
+  .site-footer .social-icons a
+  {
+    width:40px;
+    height:40px;
+    line-height:40px;
+    margin-left:6px;
+    margin-right:0;
+    border-radius:100%;
+    background-color:#33353d
+  }
+  .copyright-text
+  {
+    margin:0
+  }
+  @media (max-width:991px)
+  {
+    .site-footer [class^=col-]
+    {
+      margin-bottom:30px
+    }
+  }
+  @media (max-width:767px)
+  {
+    .site-footer
+    {
+      padding-bottom:0
+    }
+    .site-footer .copyright-text,.site-footer .social-icons
+    {
+      text-align:center
+    }
+  }
+  .social-icons
+  {
+    padding-left:0;
+    margin-bottom:0;
+    list-style:none
+  }
+  .social-icons li
+  {
+    display:inline-block;
+    margin-bottom:4px
+  }
+  .social-icons li.title
+  {
+    margin-right:15px;
+    text-transform:uppercase;
+    color:#96a2b2;
+    font-weight:700;
+    font-size:13px
+  }
+  .social-icons a{
+    background-color:#eceeef;
+    color:#818a91;
+    font-size:16px;
+    display:inline-block;
+    line-height:44px;
+    width:44px;
+    height:44px;
+    text-align:center;
+    margin-right:8px;
+    border-radius:100%;
+    -webkit-transition:all .2s linear;
+    -o-transition:all .2s linear;
+    transition:all .2s linear
+  }
+  .social-icons a:active,.social-icons a:focus,.social-icons a:hover
+  {
+    color:#fff;
+    background-color:#29aafe
+  }
+  .social-icons.size-sm a
+  {
+    line-height:34px;
+    height:34px;
+    width:34px;
+    font-size:14px
+  }
+  .social-icons a.facebook:hover
+  {
+    background-color:#3b5998
+  }
+  .social-icons a.twitter:hover
+  {
+    background-color:#00aced
+  }
+  .social-icons a.linkedin:hover
+  {
+    background-color:#007bb6
+  }
+  .social-icons a.dribbble:hover
+  {
+    background-color:#ea4c89
+  }
+  @media (max-width:767px)
+  {
+    .social-icons li.title
+    {
+      display:block;
+      margin-right:0;
+      font-weight:600
+    }
+  }

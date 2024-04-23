@@ -42,13 +42,13 @@ function loadDatePicker() {
 function getRates() {
     var guestFactor = document.getElementById("guests").value;
     var roomFactor = document.getElementById("room").value;
-    var sunday = 195 * guestFactor * roomFactor;
-    var monday = 150 * guestFactor * roomFactor;
-    var tuesday = 150 * guestFactor * roomFactor;
-    var wednesday = 160 * guestFactor * roomFactor;
-    var thursday = 175 * guestFactor * roomFactor;
-    var friday = 235 * guestFactor * roomFactor;
-    var saturday = 270 * guestFactor * roomFactor;
+    var sunday = Math.round(195 * guestFactor * roomFactor);
+    var monday = Math.round(150 * guestFactor * roomFactor);
+    var tuesday = Math.round(150 * guestFactor * roomFactor);
+    var wednesday = Math.round(160 * guestFactor * roomFactor);
+    var thursday = Math.round(175 * guestFactor * roomFactor);
+    var friday = Math.round(235 * guestFactor * roomFactor);
+    var saturday = Math.round(270 * guestFactor * roomFactor);
     return [sunday, monday, tuesday, wednesday, thursday, friday, saturday];
 }
 
@@ -73,7 +73,7 @@ function price() {
     var fridays = getDaysBetweenDates(start, future, 5) * dayrates[5];
     var saturdays = getDaysBetweenDates(start, future, 6) * dayrates[6];
 
-    document.getElementById("price").value = "Purchase $" + (sundays + mondays + tuesdays + wednesdays + thursdays + fridays + saturdays);
+    document.getElementById("price").value = "Purchase €" + (sundays + mondays + tuesdays + wednesdays + thursdays + fridays + saturdays);
 }
 
 

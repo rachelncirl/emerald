@@ -12,8 +12,6 @@
     <!-- Include boostrap CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Include theme CSS-->
-    <link rel="stylesheet" href="style.css">
 
      <!-- Include Awesome Fonts Icons-->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -41,63 +39,49 @@
 </head>
 
 <body>
-   <header>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="images/logotype.png" >
-                        <p>EMERALD HAVEN</p>
-                        <p>HOTEL</p>
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="rooms.html">Rooms</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="dining.html">Dining</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="spa.html">Hotel Spa</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="gallery.html">Gallery</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact</a>
-                            </li>
-                        </ul>
-                        <a href="reservation.html" class="btn btn-sm btn-outline-secondary" role="button">Booking</a>
-                    </div>
-                </div>
-             </nav>
-        </header>
-    <main>
-        <section class="jumbotron text-center">
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <div class="row justify-content-md-center">
-                    <div class="slogan col-md-3">
-                        <h1 class="jumbotron-heading">Emerald</h1>
-                        <h2>Haven</h2>
-                        <h5>hotel</h5>
-                        <p class="lead text-muted">hotel</p>
-                        <p>
-                            <a href="#" class="btn btn-secondary my-2">Book Now</a>
-                        </p>
-                    </div>
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logotype.png">
+                    <p class="m-0">EMERALD HAVEN</p>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="rooms.html">Rooms</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dining.html">Dining</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="spa.html">Hotel Spa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <a href="reservation.html" class="btn btn-sm text-light btn-brown" role="button">Booking</a>
                 </div>
             </div>
-        </section>
-    </main>
+        </nav>
+    </header>
 
-    <div class="container">
-        <br><br>
+    <div class="banner-image"><img src="images/2.jpg"></div>
+
+    <div class="container padded-top">
         <h2>Reservation</h2>
 
         <form id="reservationForm">
@@ -173,8 +157,8 @@
                     </div>
                     <br>
                     <div>
-                        <input data-bs-toggle="modal" data-bs-target="#myModal" type="button"
-                            class="btn btn-primary btn-block" value="Purchase $0" id="price"
+                        <input data-bs-toggle="modal" data-bs-target="#reservationModal" type="button"
+                            class="btn btn-primary btn-block" value="Purchase €0" id="price"
                             onclick="requestBooking()" />
 
                     </div>
@@ -185,7 +169,7 @@
     <br>
 
     <!-- The Reservation Modal -->
-    <div class="modal" id="myModal">
+    <div class="modal" id="reservationModal">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
 
@@ -200,17 +184,29 @@
                 <div class="modal-body">
                     <div class="container">
                         <div id="bookingSummary">
-                            <p><label>Name: </label><label id="bookingName" class="form-label"></label></p>
-                            <p><label>Email: </label><label id="bookingEmail" class="form-label"></label></p>
-                            <p><label>Phone: </label><label id="bookingPhone" class="form-label"></label></p>
-                            <p><label>Check-In: </label><label id="bookingCheckIn" class="form-label"></label></p>
-                            <p><label>Check-Out: </label><label id="bookingCheckOut" class="form-label"></label></p>
-                            <p><label>Nights: </label><label id="bookingNights" class="form-label"></label></p>
-                            <p><label>Guests: </label><label id="bookingGuests" class="form-label"></label></p>
-                            <p><label>Room: </label><label id="bookingRoom" class="form-label"></label></p>
-                            <p><label>Price: </label><label id="bookingPrice" class="form-label"></label></p>
-                            <input type="button" class="btn btn-danger" data-bs-dismiss="modal" id="finish"
-                                value="Close" onclick="resetForm()" />
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-12">
+                                    <p><i>Many thanks for making your reservation with the Emerald Haven Hotel.</i></p>
+                                    <p><i>We look forward to your stay with us.</i></p>
+                                    <p><b><label>Name: </label></b><label id="bookingName" class="form-label"></label></p>
+                                    <p><b><label>Email: </label></b><label id="bookingEmail" class="form-label"></label></p>
+                                    <p><b><label>Phone: </label></b><label id="bookingPhone" class="form-label"></label></p>
+                                    <p><b><label>Check-In: </label></b><label id="bookingCheckIn" class="form-label"></label>
+                                    </p>
+                                    <p><b><label>Check-Out: </label></b><label id="bookingCheckOut" class="form-label"></label>
+                                    </p>
+                                    <p><b><label>Nights: </label></b><label id="bookingNights" class="form-label"></label></p>
+                                    <p><b><label>Guests: </label></b><label id="bookingGuests" class="form-label"></label></p>
+                                    <p><b><label>Room: </label></b><label id="bookingRoom" class="form-label"></label></p>
+                                    <p><b><label>Price: </label></b><label id="bookingPrice" class="form-label"></label></p>
+                                    <input type="button" class="btn btn-danger" data-bs-dismiss="modal" id="finish"
+                                        value="Close" onclick="resetForm()" />
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+
+                                    <img src="images/hotel/emerald_hotel_from_dining.png" style="width:80%;"/>
+                                </div>
+                            </div>
                         </div>
 
                         <div id="paymentForm">
@@ -238,7 +234,7 @@
                                 </div>
                                 <div class="col">
                                     <div class="form-outline">
-                                        <img src="images/card-icons.png" alt="Cards" class="img-fluid" style="height:80px;" />
+                                        <img src="images/card-icons.png" alt="Cards" class="img-fluid" />
                                     </div>
                                 </div>
                             </div>
