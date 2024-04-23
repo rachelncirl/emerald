@@ -12,8 +12,6 @@
     <!-- Include boostrap CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Include theme CSS-->
-    <link rel="stylesheet" href="style.css">
 
      <!-- Include Awesome Fonts Icons-->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -159,7 +157,7 @@
                     </div>
                     <br>
                     <div>
-                        <input data-bs-toggle="modal" data-bs-target="#myModal" type="button"
+                        <input data-bs-toggle="modal" data-bs-target="#reservationModal" type="button"
                             class="btn btn-primary btn-block" value="Purchase €0" id="price"
                             onclick="requestBooking()" />
 
@@ -171,7 +169,7 @@
     <br>
 
     <!-- The Reservation Modal -->
-    <div class="modal" id="myModal">
+    <div class="modal" id="reservationModal">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
 
@@ -188,17 +186,19 @@
                         <div id="bookingSummary">
                             <div class="row">
                                 <div class="col-lg-6 col-sm-12">
-                                    <p><label>Name: </label><label id="bookingName" class="form-label"></label></p>
-                                    <p><label>Email: </label><label id="bookingEmail" class="form-label"></label></p>
-                                    <p><label>Phone: </label><label id="bookingPhone" class="form-label"></label></p>
-                                    <p><label>Check-In: </label><label id="bookingCheckIn" class="form-label"></label>
+                                    <p><i>Many thanks for making your reservation with the Emerald Haven Hotel.</i></p>
+                                    <p><i>We look forward to your stay with us.</i></p>
+                                    <p><b><label>Name: </label></b><label id="bookingName" class="form-label"></label></p>
+                                    <p><b><label>Email: </label></b><label id="bookingEmail" class="form-label"></label></p>
+                                    <p><b><label>Phone: </label></b><label id="bookingPhone" class="form-label"></label></p>
+                                    <p><b><label>Check-In: </label></b><label id="bookingCheckIn" class="form-label"></label>
                                     </p>
-                                    <p><label>Check-Out: </label><label id="bookingCheckOut" class="form-label"></label>
+                                    <p><b><label>Check-Out: </label></b><label id="bookingCheckOut" class="form-label"></label>
                                     </p>
-                                    <p><label>Nights: </label><label id="bookingNights" class="form-label"></label></p>
-                                    <p><label>Guests: </label><label id="bookingGuests" class="form-label"></label></p>
-                                    <p><label>Room: </label><label id="bookingRoom" class="form-label"></label></p>
-                                    <p><label>Price: </label><label id="bookingPrice" class="form-label"></label></p>
+                                    <p><b><label>Nights: </label></b><label id="bookingNights" class="form-label"></label></p>
+                                    <p><b><label>Guests: </label></b><label id="bookingGuests" class="form-label"></label></p>
+                                    <p><b><label>Room: </label></b><label id="bookingRoom" class="form-label"></label></p>
+                                    <p><b><label>Price: </label></b><label id="bookingPrice" class="form-label"></label></p>
                                     <input type="button" class="btn btn-danger" data-bs-dismiss="modal" id="finish"
                                         value="Close" onclick="resetForm()" />
                                 </div>
@@ -234,8 +234,7 @@
                                 </div>
                                 <div class="col">
                                     <div class="form-outline">
-                                        <img src="images/card-icons.png" alt="Cards" class="img-fluid"
-                                            style="height:80px;" />
+                                        <img src="images/card-icons.png" alt="Cards" class="img-fluid" />
                                     </div>
                                 </div>
                             </div>
