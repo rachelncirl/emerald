@@ -56,7 +56,7 @@ body {
 
 /* Hero Section Styles */
 .hero-section {
-    background: url('images/hotel.jpg') center / cover no-repeat; /* Shorthand for background properties */
+    background: url('images/hotel/hotel.jpg') center / cover no-repeat; /* Shorthand for background properties */
     width: 100%;
     display: flex;
     padding-top:80px;
