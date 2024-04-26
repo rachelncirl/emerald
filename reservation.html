@@ -84,22 +84,22 @@
     <div class="container padded-top">
         <h2>Reservation</h2>
 
-        <form id="reservationForm">
+        <form id="reservationForm" class="needs-validation" onsubmit="requestBooking();return false">
 
             <div class="row">
                 <div class="col-lg-6 col-sm-12">
                     <div class="mb-3 mt-3">
                         <label for="name" class="form-label">Name:</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
+                        <input type="text" pattern="[a-zA-Z]*" class="form-control" id="name" placeholder="Enter Name" name="name" required>
                     </div>
                     <div class="mb-3 mt-3">
                         <label for="emailLabel" class="form-label">Email:</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
                     </div>
                     <div class="mb-3">
                         <label for="phoneLabel" class="form-label">Phone:</label>
-                        <input type="text" class="form-control" id="phone" placeholder="Enter phone number"
-                            name="phone">
+                        <input type="number" class="form-control" id="phone" placeholder="Enter phone number"
+                            name="phone" required>
                     </div>
 
                     <div class="mb-3">
@@ -152,15 +152,12 @@
                     </div>
                     <br><br>
                     <div class="checkbox">
-                        <label><input type="checkbox"> I authorise Emerald Haven Hotel Ltd. to debit the amount via my
+                        <label><input type="checkbox" required> I authorise Emerald Haven Hotel Ltd. to debit the amount via my
                             chosen payment method. I have accepted the Terms and Conditions as outlined here.</label>
                     </div>
                     <br>
                     <div>
-                        <input data-bs-toggle="modal" data-bs-target="#reservationModal" type="button"
-                            class="btn btn-primary btn-block" value="Purchase €0" id="price"
-                            onclick="requestBooking()" />
-
+                        <input type="submit" class="btn btn-primary btn-block" value="Purchase €0" id="price" />
                     </div>
                 </div>
             </div>
