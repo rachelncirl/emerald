@@ -6,42 +6,39 @@ body {
     font-family: "Mulish", sans-serif;
     color: #21382a;
     margin: 0;
-}
-
+    }
+    
 .btn-brown{
     background-color: #AA8453
-}
-
-/* Navigation Bar Styles */
+    }
+    
 .navbar {
     background-image: linear-gradient(#21382a, #1e3127);
     border-bottom: 1px solid #eae8e0;
     padding: 10px 20px; /* Consistent padding around elements */
-}
+    }
 
 .navbar a {
     color: #eae8e0;
     transition: color 0.3s; /* Smooth transition for hover effects */
-}
+    }
 
 .navbar a:hover,
 .navbar-nav .nav-link.active {
     color: #FFCA2C;
-}
+    }
 
 .navbar li{
     padding:0 10px;
-}
+    }
 
 .navbar .btn {
     color: #1e3127;
-}
+    }
 
 .navbar .btn:hover {
-
     color: #1e3127;
-}
-
+    }
 
 .navbar-brand p {
     font-weight: 700;
@@ -52,32 +49,30 @@ body {
     width: 17%;
     float: left;
     padding:5px 10px 5px 0 
-}
+    }
 
-/* Hero Section Styles */
 .hero-section {
-    background: url('images/hotel/hotel.jpg') center / cover no-repeat; /* Shorthand for background properties */
+    background: url('images/hotel.jpg') center / cover no-repeat; /* Shorthand for background properties */
     width: 100%;
     display: flex;
     padding-top:80px;
-}
+    }
 
-/* Hero Section Styles */
 .about_hero {
     background: url('images/hotel/emerald_hotel_from_above.png') center / cover no-repeat; /* Shorthand for background properties */
     width: 100%;
     display: flex;
     padding-top:250px;
-}
+    }
 
 .hero-section h1{
     margin-top:60px;
     text-shadow: 2px 2px 20px #000000;
-}
+    }
 
 .landing_booking input, .landing_booking label, .landing_booking button, .room button{
     font-size: 12px;
-}
+    }
 
 .landing_booking{
     background: rgba(30, 49, 39, .6);
@@ -86,41 +81,38 @@ body {
     border-left: 1px solid #bbb;
     border-right: 1px solid #bbb;
     margin-top:200px
-}
+    }
 
 .landing_booking input, .landing_booking button, .navbar .btn, .room button{
     border-radius: 0;
     font-weight: bold
-}
+    }
 
 .landing_booking label{
     float:left
-}
+    }
 
 .img-fluid{
     height:200px !important;
     width:100%;
-}
+    }
 
  .fa-bed, .fa-bath, .fa-wifi,.room-offer span{
     color: #AA8453
-}
+    }
 
 .room-offer_bg{
     background-color: #F8F5F1
-}
+    }
 
 .bi-star-fill{
     color:#F5C020
-}
-
-.introduction div{
-}
+    }
 
 .introduction .img_bg{
     height:570px;
     position: relative;
-}
+    }
 
 .introduction .img_fr{
     height:200px;
@@ -129,7 +121,7 @@ body {
     position:absolute;
     top:72%;
     right:2%
-}
+    }
 
 .overlay_promo{
     position:absolute;
@@ -137,65 +129,64 @@ body {
     right:32%;
     background: rgba(30, 49, 39, .9);
     border-right:15px solid #AA8453;
-}
+    }
+
 .brown{
     color: #AA8453
-}
+    }
 
 .action{
     background-color: #AA8453;
     text-decoration: none;
     color:#fff;
-
-}
+    }
 
 .action:hover{
     background-color: #B59469;
-}
-
+    }
 
 .about_booking {
     background: url('images/1.jpg') center / cover no-repeat; /* Shorthand for background properties */
     width: 100%;
     display: flex;
+    }
 
- 
-}
+#ticTacToeGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    width: 100%;
+    max-width: 150px;
+    margin:auto;
+  }
+
+  .cell {
+    height: 50px; /* Square cells */
+    background-color: #f0f0f0;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    cursor: pointer;
+  }
 
 @media (min-width: 768px) and (max-width: 992px) {
     
     .room-offer_bg .row div{
         padding:20px 150px;
-
     }
-    
-     
-    
-    
 }
-
 
 @media (max-width: 991.98px) {
     .room-offer_bg .row{
         padding-top:0px !important;
-
     }
     
     .room-offer_bg .container small{
         padding-bottom:20px;
-
     }
-    
-    .introduction .img_bg{
-        
 
-    }
-    
-    .introduction .img_fr{
-        
-
-    }
-    
     .introduction div:nth-child(2){
         padding-top:120px;
         text-align: center
