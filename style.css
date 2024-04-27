@@ -51,6 +51,10 @@ body {
     padding:5px 10px 5px 0 
     }
 
+.navbar-toggler{
+    color: #eae8e0;
+    background:#eae8e0;
+    }
 .hero-section {
     background: url('images/hotel.jpg') center / cover no-repeat; /* Shorthand for background properties */
     width: 100%;
