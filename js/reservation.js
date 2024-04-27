@@ -98,7 +98,8 @@ function getDaysBetweenDates(start, end, day) {
     return result;
 }
 
-function requestBooking() {
+function requestBooking(e) {
+    $("#reservationModal").modal('show');
     var room = document.getElementById("room");
     var guests = document.getElementById("guests");
     console.log(document.getElementById("email").value);
@@ -111,6 +112,7 @@ function requestBooking() {
     document.getElementById("bookingCheckIn").textContent = document.getElementById("input1").value;
     document.getElementById("bookingCheckOut").textContent = document.getElementById("input2").value;
     document.getElementById("bookingPrice").textContent = document.getElementById("price").value;
+    return false;
 }
 
 /* When the payment is made hide the payment form and display

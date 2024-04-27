@@ -13,8 +13,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-     <!-- Include Awesome Fonts Icons-->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Include Awesome Fonts Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Include date picker CSS -->
     <link rel="stylesheet" href="css/reservation.css">
@@ -34,6 +34,12 @@
             loadDatePicker();
             var summary = document.getElementById('bookingSummary');
             summary.style.display = 'none';
+        });
+    </script>
+    <script>
+        /* Enable tool tips on the page */
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
         });
     </script>
 </head>
@@ -84,22 +90,28 @@
     <div class="container padded-top">
         <h2>Reservation</h2>
 
-        <form id="reservationForm">
+        <form id="reservationForm" class="needs-validation" onsubmit="requestBooking();return false">
 
             <div class="row">
                 <div class="col-lg-6 col-sm-12">
                     <div class="mb-3 mt-3">
-                        <label for="name" class="form-label">Name:</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
+                        <label for="name" class="form-label">Name: <i class="fa fa-info-circle" data-toggle="tooltip"
+                                data-placement="right"
+                                title="Name field only accepts letters, spaces, hyphens and dashes"></i></label>
+                        <input type="text" pattern="[a-zA-Z \-']*" class="form-control" id="name"
+                            placeholder="Enter Name" name="name" required>
                     </div>
                     <div class="mb-3 mt-3">
                         <label for="emailLabel" class="form-label">Email:</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email"
+                            required>
                     </div>
                     <div class="mb-3">
-                        <label for="phoneLabel" class="form-label">Phone:</label>
-                        <input type="text" class="form-control" id="phone" placeholder="Enter phone number"
-                            name="phone">
+                        <label for="phoneLabel" class="form-label">Phone: <i class="fa fa-info-circle"
+                                data-toggle="tooltip" data-placement="right"
+                                title="Phone number field only accepts numbers"></i></label>
+                        <input type="number" class="form-control" id="phone" placeholder="Enter phone number"
+                            name="phone" required>
                     </div>
 
                     <div class="mb-3">
@@ -152,15 +164,13 @@
                     </div>
                     <br><br>
                     <div class="checkbox">
-                        <label><input type="checkbox"> I authorise Emerald Haven Hotel Ltd. to debit the amount via my
+                        <label><input type="checkbox" required> I authorise Emerald Haven Hotel Ltd. to debit the amount
+                            via my
                             chosen payment method. I have accepted the Terms and Conditions as outlined here.</label>
                     </div>
                     <br>
                     <div>
-                        <input data-bs-toggle="modal" data-bs-target="#reservationModal" type="button"
-                            class="btn btn-primary btn-block" value="Purchase €0" id="price"
-                            onclick="requestBooking()" />
-
+                        <input type="submit" class="btn btn-primary btn-block" value="Purchase €0" id="price" />
                     </div>
                 </div>
             </div>
@@ -175,8 +185,7 @@
 
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <!-- <h4 class="modal-title">Reservation Summary</h4> -->
-                    <h4 class="modal-title">Payment</h4>
+                    <h4 class="modal-title-payment">Reservation Booking</h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
 
@@ -188,23 +197,32 @@
                                 <div class="col-lg-6 col-sm-12">
                                     <p><i>Many thanks for making your reservation with the Emerald Haven Hotel.</i></p>
                                     <p><i>We look forward to your stay with us.</i></p>
-                                    <p><b><label>Name: </label></b><label id="bookingName" class="form-label"></label></p>
-                                    <p><b><label>Email: </label></b><label id="bookingEmail" class="form-label"></label></p>
-                                    <p><b><label>Phone: </label></b><label id="bookingPhone" class="form-label"></label></p>
-                                    <p><b><label>Check-In: </label></b><label id="bookingCheckIn" class="form-label"></label>
+                                    <p><b><label>Name:&ensp;</label></b><label id="bookingName" class="form-label"></label>
                                     </p>
-                                    <p><b><label>Check-Out: </label></b><label id="bookingCheckOut" class="form-label"></label>
+                                    <p><b><label>Email:&ensp;</label></b><label id="bookingEmail" class="form-label"></label>
                                     </p>
-                                    <p><b><label>Nights: </label></b><label id="bookingNights" class="form-label"></label></p>
-                                    <p><b><label>Guests: </label></b><label id="bookingGuests" class="form-label"></label></p>
-                                    <p><b><label>Room: </label></b><label id="bookingRoom" class="form-label"></label></p>
-                                    <p><b><label>Price: </label></b><label id="bookingPrice" class="form-label"></label></p>
+                                    <p><b><label>Phone:&ensp;</label></b><label id="bookingPhone" class="form-label"></label>
+                                    </p>
+                                    <p><b><label>Check-In:&ensp;</label></b><label id="bookingCheckIn"
+                                            class="form-label"></label>
+                                    </p>
+                                    <p><b><label>Check-Out:&ensp;</label></b><label id="bookingCheckOut"
+                                            class="form-label"></label>
+                                    </p>
+                                    <p><b><label>Nights:&ensp;</label></b><label id="bookingNights"
+                                            class="form-label"></label></p>
+                                    <p><b><label>Guests:&ensp;</label></b><label id="bookingGuests"
+                                            class="form-label"></label></p>
+                                    <p><b><label>Room:&ensp;</label></b><label id="bookingRoom" class="form-label"></label>
+                                    </p>
+                                    <p><b><label>Price:&ensp;</label></b><label id="bookingPrice" class="form-label"></label>
+                                    </p>
                                     <input type="button" class="btn btn-danger" data-bs-dismiss="modal" id="finish"
                                         value="Close" onclick="resetForm()" />
                                 </div>
                                 <div class="col-lg-6 col-sm-12">
 
-                                    <img src="images/hotel/emerald_hotel_from_dining.png" style="width:80%;"/>
+                                    <img src="images/hotel/emerald_hotel_from_dining.png" style="width:80%;" />
                                 </div>
                             </div>
                         </div>
@@ -249,7 +267,7 @@
                                 </div>
                                 <div class="col">
                                     <div class="form-outline">
-                                        <input type="text" id="formCardNumber" class="form-control" />
+                                        <input type="number" id="formCardNumber" class="form-control" />
                                         <label class="form-label" for="formCardNumber">Credit card number</label>
                                     </div>
                                 </div>
@@ -264,7 +282,7 @@
                                 </div>
                                 <div class="col-3">
                                     <div class="form-outline">
-                                        <input type="text" id="formCVV" class="form-control" />
+                                        <input type="number" id="formCVV" class="form-control" />
                                         <label class="form-label" for="formCVV">CVV</label>
                                     </div>
                                 </div>
@@ -281,62 +299,62 @@
 
     <footer class="site-footer">
         <div class="container">
-          <div class="row">
+            <div class="row">
 
-            <div class="col-xs-6 col-md-3">
-                <h6>Categories</h6>
-                <a class="navbar-brand" href="index.html">
-                    <img src="images/logotype.png" >
-                    <p>EMERALD HAVEN</p>
-                    <p>HOTEL</p>
-                </a>
-              </div>
+                <div class="col-xs-6 col-md-3">
+                    <h6>Categories</h6>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logotype.png">
+                        <p>EMERALD HAVEN</p>
+                        <p>HOTEL</p>
+                    </a>
+                </div>
 
 
-            <div class="col-sm-12 col-md-6">
-              <h6>Emerald Hotel: We Can't Wait To Meet You</h6>
-              <p class="text-justify">Bothar Road, BaileTown, 2W3 C5T1, Co. Galway
-                <br>
-                045 782 6374
-                <br>
-                info@emerald.ie
-              </p>
+                <div class="col-sm-12 col-md-6">
+                    <h6>Emerald Hotel: We Can't Wait To Meet You</h6>
+                    <p class="text-justify">Bothar Road, BaileTown, 2W3 C5T1, Co. Galway
+                        <br>
+                        045 782 6374
+                        <br>
+                        info@emerald.ie
+                    </p>
+                </div>
+
+
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="lost&found.html">Lost & Found</a></li>
+                        <li><a href="https://the-talks.com/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="#top">Back To Top<span class="fa fa-chevron-up"></span></a></li>
+                    </ul>
+                </div>
             </div>
-  
-            
-  
-            <div class="col-xs-6 col-md-3">
-              <h6>Quick Links</h6>
-              <ul class="footer-links">
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="lost&found.html">Lost & Found</a></li>
-                <li><a href="https://the-talks.com/privacy-policy/">Privacy Policy</a></li>
-                <li><a href="#top">Back To Top<span class="fa fa-chevron-up"></span></a></li>
-              </ul>
-            </div>
-          </div>
-          <hr>
+            <hr>
         </div>
         <div class="container">
-          <div class="row">
-            <div class="col-md-8 col-sm-6 col-xs-12">
-              <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
-           Emerald Hotel Group ltd. 
-              </p>
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by
+                        Emerald Hotel Group ltd.
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
             </div>
-  
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <ul class="social-icons">
-                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
-              </ul>
-            </div>
-          </div>
         </div>
-  </footer> 
+    </footer>
     <!-- Include boostrap JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
