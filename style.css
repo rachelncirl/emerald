@@ -176,9 +176,14 @@ body {
   }
 
 @media (min-width: 768px) and (max-width: 992px) {
-    
-    .room-offer_bg .row div{
-        padding:20px 150px;
+    .room-offer_bg .row {
+        margin: 0px 150px;
+    }
+    .room{
+        margin-bottom:20px;
+    }
+    .d-flex{
+        display:block !important;
     }
 }
 
@@ -194,6 +199,10 @@ body {
     .introduction div:nth-child(2){
         padding-top:120px;
         text-align: center
+    }
+
+    .d-flex h5{
+        padding-top:30px;
     }
 }
 
